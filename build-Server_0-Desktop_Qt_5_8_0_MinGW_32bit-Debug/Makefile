@@ -226,6 +226,7 @@ Makefile: ../Server_0/Server_0.pro ../../Qt/5.8/mingw53_32/mkspecs/win32-g++/qma
 		../../Qt/5.8/mingw53_32/lib/Qt5Widgets.prl \
 		../../Qt/5.8/mingw53_32/lib/Qt5Gui.prl \
 		../../Qt/5.8/mingw53_32/lib/Qt5Network.prl \
+		../../Qt/5.8/mingw53_32/lib/Qt5Sql.prl \
 		../../Qt/5.8/mingw53_32/lib/Qt5Core.prl
 	$(QMAKE) -o Makefile ..\Server_0\Server_0.pro -spec win32-g++ "CONFIG+=debug" "CONFIG+=qml_debug"
 ../../Qt/5.8/mingw53_32/mkspecs/features/spec_pre.prf:
@@ -395,6 +396,7 @@ Makefile: ../Server_0/Server_0.pro ../../Qt/5.8/mingw53_32/mkspecs/win32-g++/qma
 ../../Qt/5.8/mingw53_32/lib/Qt5Widgets.prl:
 ../../Qt/5.8/mingw53_32/lib/Qt5Gui.prl:
 ../../Qt/5.8/mingw53_32/lib/Qt5Network.prl:
+../../Qt/5.8/mingw53_32/lib/Qt5Sql.prl:
 ../../Qt/5.8/mingw53_32/lib/Qt5Core.prl:
 qmake: FORCE
 	@$(QMAKE) -o Makefile ..\Server_0\Server_0.pro -spec win32-g++ "CONFIG+=debug" "CONFIG+=qml_debug"
