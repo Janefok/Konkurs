@@ -3,6 +3,7 @@
 
 Server_0/Server_0.pro.user
 Server_0/Server_0.pro.user
+<<<<<<< HEAD
 
 build-Client-Qt_5_8_0_mingw53_32-Debug/debug/Client.exe
 =======
@@ -24,3 +25,9 @@ Client/ic_assignment_ind_black_24dp.zip
 Client/Makefile
 Client/Makefile.Debug
 Client/Makefile.Release
+=======
+Client/Client.pro.user
+build-Client-Desktop_Qt_5_8_0_MinGW_32bit-Debug/debug/Client.exe
+Client/Client.pro.user.3f34610
+>>>>>>> 1b1127b37aaee72f653247e7d520a6dbde3d7a62
+build-Client-Desktop_Qt_5_8_0_MinGW_32bit-Debug/debug/Client.exe
