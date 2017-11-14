@@ -31,3 +31,5 @@ build-Client-Desktop_Qt_5_8_0_MinGW_32bit-Debug/debug/Client.exe
 Client/Client.pro.user.3f34610
 >>>>>>> 1b1127b37aaee72f653247e7d520a6dbde3d7a62
 build-Client-Desktop_Qt_5_8_0_MinGW_32bit-Debug/debug/Client.exe
+Client/MenuBar.qmlc
+*.o
