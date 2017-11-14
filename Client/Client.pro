@@ -4,9 +4,12 @@
 #
 #-------------------------------------------------
 
-QT       += core gui network widgets
+QT       += core gui network widgets qml quick
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
+
+
+#RESOURCES += qml.qrc
 
 TARGET = Client
 TEMPLATE = app
@@ -34,3 +37,9 @@ HEADERS += \
 
 FORMS += \
         mainwindow.ui
+
+DISTFILES += \
+    main.qml \
+    MenuBar.qml \
+    PersonMenu.qml \
+    ListViewMenu.qml
