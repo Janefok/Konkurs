@@ -1,5 +1,5 @@
 import QtQuick 2.7
-import QtQuick.Controls 2.2
+import QtQuick.Controls 1.4
 import QtQuick.Controls.Material 2.1
 import QtQuick.Controls.Styles 1.4
 import QtQuick.Dialogs 1.2
@@ -43,7 +43,7 @@ ApplicationWindow {
                 anchors.left: parent.left
                 //color: ""
             }*/
-            RoundButton{
+            Button{
                 id: personalityB
                 //iconSource: "icons/ic_assignment_ind_white_24dp.png"
                 anchors.left: parent.left
@@ -62,7 +62,7 @@ ApplicationWindow {
 
             }
 
-            RoundButton{
+            Button{
                 id: news
                 //iconSource: "icons/ic_feedback_white_24dp"
                 anchors.right: parent.right
