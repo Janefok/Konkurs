@@ -48,7 +48,8 @@ DISTFILES += \
     main.qml \
     MenuBar.qml \
     PersonMenu.qml \
-    ListViewMenu.qml
+    ListViewMenu.qml \
+    TabBar.qml
 =======
 QML_IMPORT_PATH = "C:\Qt\5.8\mingw53_32\qml\QtQuick\Controls.2\Material"
 QML_IMPORT_PATH = "C:\Users\darkk\Documents\GitHub\Konkurs\Client"
