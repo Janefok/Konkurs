@@ -26,13 +26,11 @@ MyClient::MyClient(const QString& strHost,
             this,         SLOT(slotError(QAbstractSocket::SocketError))
            );
 
-    m_ptxtInfo  = new QTextEdit;
     m_ptxtInput = new QLineEdit;
 
     connect(m_ptxtInput, SIGNAL(returnPressed()),
             this,        SLOT(slotSendToServer())
            );
-    m_ptxtInfo->setReadOnly(true);
 
     QPushButton* pcmd = new QPushButton("&Send");
     connect(pcmd, SIGNAL(clicked()), SLOT(slotSendToServer()));
@@ -40,7 +38,6 @@ MyClient::MyClient(const QString& strHost,
     //Layout setup
     QVBoxLayout* pvbxLayout = new QVBoxLayout;
     pvbxLayout->addWidget(new QLabel("<H1>Client</H1>"));
-    pvbxLayout->addWidget(m_ptxtInfo);
     pvbxLayout->addWidget(m_ptxtInput);
     pvbxLayout->addWidget(pcmd);
     //qml
@@ -68,7 +65,7 @@ void MyClient::slotReadyRead()
         QString str;
         in >> time >> str;
 
-        m_ptxtInfo->append(time.toString() + " " + str);
+         qDebug() << (time.toString() + " " + str);
         m_nNextBlockSize = 0;
     }
 }
@@ -84,24 +81,23 @@ void MyClient::slotError(QAbstractSocket::SocketError err)
                      "The connection was refused." :
                      QString(m_pTcpSocket->errorString())
                     );
-    m_ptxtInfo->append(strError);
+     qDebug() << strError;
 }
 
-void MyClient::slotSendToServer()
+void MyClient::slotSendToServer(QString str)
 {
     QByteArray  arrBlock;
     QDataStream out(&arrBlock, QIODevice::WriteOnly);
     out.setVersion(QDataStream::Qt_4_2);
-    out << quint16(0) << QTime::currentTime() << m_ptxtInput->text();
+    out << quint16(0) << QTime::currentTime() << str;
 
     out.device()->seek(0);
     out << quint16(arrBlock.size() - sizeof(quint16));
 
     m_pTcpSocket->write(arrBlock);
-    m_ptxtInput->setText("");
 }
 
 void MyClient::slotConnected()
 {
-    m_ptxtInfo->append("Received the connected() signal");
+     qDebug() << "Received the connected() signal";
 }

@@ -1,8 +1,17 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+Server_0/Server_0.pro.user
+Client/Client.pro.user.3f34610
+build-Client-Desktop_Qt_5_8_0_MinGW_32bit-Debug/Makefile.Debug
+build-Client-Desktop_Qt_5_8_0_MinGW_32bit-Debug/Makefile.Release
+=======
+>>>>>>> master
 
 Server_0/Server_0.pro.user
 Server_0/Server_0.pro.user
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 build-Client-Qt_5_8_0_mingw53_32-Debug/debug/Client.exe
@@ -33,3 +42,9 @@ Client/Client.pro.user.3f34610
 build-Client-Desktop_Qt_5_8_0_MinGW_32bit-Debug/debug/Client.exe
 Client/MenuBar.qmlc
 *.o
+=======
+Client/Client.pro.user
+build-Client-Desktop_Qt_5_8_0_MinGW_32bit-Debug/debug/Client.exe
+Client/Client.pro.user.3f34610
+>>>>>>> Korshun
+>>>>>>> master

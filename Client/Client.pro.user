@@ -2,6 +2,7 @@
 <!DOCTYPE QtCreatorProject>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 <!-- Written by QtCreator 4.4.1, 2017-11-14T11:03:23. -->
 =======
 <!-- Written by QtCreator 4.4.1, 2017-11-12T15:46:48. -->
@@ -9,6 +10,9 @@
 =======
 <!-- Written by QtCreator 4.4.1, 2017-11-14T15:41:21. -->
 >>>>>>> 1b1127b37aaee72f653247e7d520a6dbde3d7a62
+=======
+<!-- Written by QtCreator 4.4.1, 2017-11-14T17:38:21. -->
+>>>>>>> master
 <qtcreator>
  <data>
   <variable>EnvironmentId</variable>
@@ -312,10 +316,14 @@
     <value type="QString" key="Qt4ProjectManager.Qt4RunConfiguration.ProFile">Client.pro</value>
     <value type="bool" key="Qt4ProjectManager.Qt4RunConfiguration.UseDyldImageSuffix">false</value>
 <<<<<<< HEAD
+<<<<<<< HEAD
     <value type="QString" key="Qt4ProjectManager.Qt4RunConfiguration.UserWorkingDirectory">C:/Users/darkk/Documents/GitHub/Konkurs/Client</value>
     <value type="QString" key="Qt4ProjectManager.Qt4RunConfiguration.UserWorkingDirectory.default">C:/Users/darkk/Documents/GitHub/Konkurs/build-Client-Qt_5_8_0_mingw53_32-Debug</value>
 =======
     <value type="QString" key="Qt4ProjectManager.Qt4RunConfiguration.UserWorkingDirectory"></value>
+=======
+    <value type="QString" key="Qt4ProjectManager.Qt4RunConfiguration.UserWorkingDirectory">D:/Konkurs/Client</value>
+>>>>>>> master
     <value type="QString" key="Qt4ProjectManager.Qt4RunConfiguration.UserWorkingDirectory.default">D:/Konkurs/build-Client-Desktop_Qt_5_8_0_MinGW_32bit-Debug</value>
     <value type="uint" key="RunConfiguration.QmlDebugServerPort">3768</value>
     <value type="bool" key="RunConfiguration.UseCppDebugger">false</value>
