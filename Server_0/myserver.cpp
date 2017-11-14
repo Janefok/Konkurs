@@ -6,6 +6,7 @@
 #include <QBoxLayout>
 #include <QLabel>
 #include <QTime>
+#include "handler.h"
 
 MyServer::MyServer(int nPort, QWidget* pwgt /*=0*/) : QWidget(pwgt)
                                                     , m_nNextBlockSize(0)
@@ -65,10 +66,11 @@ void MyServer::slotReadClient()
         }
         QTime   time;
         QString str;
+        Handler response;
         in >> time >> str;
 
         QString strMessage =
-            time.toString() + " " + "Client has sended - " + str;
+            response.Setfunc(str);
         m_ptxt->append(strMessage);
 
         m_nNextBlockSize = 0;

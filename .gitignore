@@ -13,3 +13,4 @@ Client/Client.pro.user
 build-Client-Desktop_Qt_5_8_0_MinGW_32bit-Debug/debug/Client.exe
 Client/Client.pro.user.3f34610
 >>>>>>> Korshun
+*.o

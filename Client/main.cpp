@@ -6,11 +6,10 @@ int main(int argc, char *argv[])
 {
     QApplication a(argc, argv);
 
-    MyClient     client("192.168.1.56", 2323);
-    //client.show();
+    MyClient     client("localhost", 2323);
 
-    client.slotSendToServer("ХУЙ\ds\sd\sdba\brt\wrn");
-    client.slotSendToServer("reyw\ds\sd\sdba\brt\wrn");
+    client.slotSendToServer("LOAD/Users");
+    client.slotSendToServer("ВторойЕВгения");
 
     //подключение qml
     QQmlApplicationEngine engine;
