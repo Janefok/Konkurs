@@ -5,6 +5,8 @@
 #include <QBoxLayout>
 #include <QLabel>
 #include <QTime>
+#include <QQmlApplicationEngine>
+
 
 MyClient::MyClient(const QString& strHost,
                    int            nPort,
@@ -12,6 +14,9 @@ MyClient::MyClient(const QString& strHost,
                   ) : QWidget(pwgt)
                     , m_nNextBlockSize(0)
 {
+    //подключение qml
+    //QQmlApplicationEngine engine;
+
     m_pTcpSocket = new QTcpSocket(this);
 
     m_pTcpSocket->connectToHost(strHost, nPort);
@@ -38,7 +43,10 @@ MyClient::MyClient(const QString& strHost,
     pvbxLayout->addWidget(m_ptxtInfo);
     pvbxLayout->addWidget(m_ptxtInput);
     pvbxLayout->addWidget(pcmd);
+    //qml
+    //pvbxLayout->addWidget(engine.load(QUrl(QLatin1String("main.qml"))));
     setLayout(pvbxLayout);
+    //engine.load(QUrl(QLatin1String("main.qml")));
 }
 
 void MyClient::slotReadyRead()
