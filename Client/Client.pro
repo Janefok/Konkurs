@@ -43,24 +43,17 @@ HEADERS += \
 FORMS += \
         mainwindow.ui
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-QML_IMPORT_PATH = "D:\Qt\5.8\mingw53_32\qml\QtQuick\Controls.2\Material"
-QML_IMPORT_PATH = "D:\Konkurs\Client"
 
->>>>>>> master
+
 DISTFILES += \
     main.qml \
     MenuBar.qml \
     PersonMenu.qml \
-<<<<<<< HEAD
     ListViewMenu.qml \
-    TabBar.qml
-=======
+    NewTabButton.qml
+
 QML_IMPORT_PATH = "C:\Qt\5.8\mingw53_32\qml\QtQuick\Controls.2\Material"
 QML_IMPORT_PATH = "C:\Users\darkk\Documents\GitHub\Konkurs\Client"
->>>>>>> master
-=======
-    ListViewMenu.qml
->>>>>>> master
+
+
+
