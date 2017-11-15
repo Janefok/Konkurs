@@ -14,3 +14,7 @@ build-Client-Desktop_Qt_5_8_0_MinGW_32bit-Debug/debug/Client.exe
 Client/Client.pro.user.3f34610
 >>>>>>> Korshun
 *.o
+Client/Client.pro.user
+Client/Client.pro.user
+Client/MenuBar.qmlc
+Client/PersonMenu.qmlc
