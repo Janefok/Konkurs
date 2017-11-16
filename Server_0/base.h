@@ -20,6 +20,7 @@ public:
 class Table{
     QSqlTableModel * qTable;
     int gCurrentRow = -1;
+    QSqlRecord rec;
 public:
     Table(QSqlTableModel &);
     bool next();
