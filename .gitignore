@@ -73,3 +73,5 @@ build-Server_0-Qt_4_8_6-Debug/debug/Server_0.exe
 build-Client-Qt_5_8_0_mingw53_32-Debug/debug/moc_myclient.cpp
 build-Client-Qt_5_8_0_mingw53_32-Debug/Makefile.Release
 >>>>>>> Korshun
+Client/SearchData.qmlc
+*.qml

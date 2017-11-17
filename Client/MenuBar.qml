@@ -14,59 +14,39 @@ ApplicationWindow {
     width: 320
     height: 480
     Material.theme: Material.Dark
-    //Material.accent: Material.LightGreen
+    Material.background: Material.LightGreen
+    Loader {
+        id: loader
+        anchors.fill: parent
+        width: parent.width
+        source: "ListViewMenu.qml"
+    }
 
-//     header: Item{
-//        id: toolBar
-
-//        Loader{
-//            id:search
-//            width: parent.width
-//            height: 40
-//            //anchors.fill: on
-//            //anchors.fill: parent
-//            source: "SearchData.qml"
-
-//            }
-//        }
-//    Rectangle{
-//        color: "#4d4d4d"
-//        anchors.fill: parent
-
-        Loader {
-            id: loader
-            anchors.fill: parent
-            width: parent.width
-            //Layout.top: view.bottom
-            source: "ListViewMenu.qml"
+    footer: TabBar{
+        id: tabBar
+        width: parent.width
+        TabButton{
+            text: "First"
         }
-
-//    }
-        footer: TabBar{
-            id: tabBar
-            width: parent.width
-            TabButton{
-                text: "First"
-            }
-            TabButton{
-                text: "Second"
-            }
-            NewTabButton{
-                text: "test"
-            }
-            onCurrentIndexChanged: {
-                switch (currentIndex)
-                {
-                    case 0:
-                        loader.source = "ListViewMenu.qml"
-                        //search.source = "SearchData.qml"
-                        break;
-                    case 1:
-                        loader.source = "qrc:/Test_2.qml"
-                        break;
-                }
+        TabButton{
+            text: "Second"
+        }
+        NewTabButton{
+            text: "test"
+        }
+        onCurrentIndexChanged: {
+            switch (currentIndex)
+            {
+                case 0:
+                    loader.source = "ListViewMenu.qml"
+                    //search.source = "SearchData.qml"
+                    break;
+                case 1:
+                    loader.source = "qrc:/Test_2.qml"
+                    break;
             }
         }
+    }
 
 
 //    StackLayout{
