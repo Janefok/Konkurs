@@ -39,26 +39,37 @@ bool Table::next(){
 }
 
 void Table::select(){
+    rec = qTable->record();
+    //qTable->setEditStrategy(QSqlTableModel::OnManualSubmit);
     qTable->select();
+    qTable->record().clear();
 }
 
 void Table::setValue(QString lRowName, QVariant lValue){
-    qTable->record().setValue(lRowName, lValue);
+    rec.setValue( qTable->record().indexOf(lRowName), lValue);
+    qTable->setFilter(lRowName + "='"+lValue.toString()+"'");
 }
 
 
 void Table::updateLine(){
     //qTable->record().append(qTable->record().field());
+    qTable->record().clear();
 }
 
 void Table::deleteLine(){
     gCurrentRow == -1 ? gCurrentRow = 0 : gCurrentRow ;
     //qTable->deleteRowFromTable(gCurrentRow);
+    qTable->record().clear();
 }
 
 void Table::insertLine(){
     gCurrentRow=-1;
-    qTable->insertRecord(-1,qTable->record());
-    qDebug() << qTable->lastError().text();
+    qTable->insertRecord(gCurrentRow,rec);
+    if(qTable->submitAll()){
+        qTable->database().commit();
+    }else{
+        qTable->database().rollback();
+        qDebug() << qTable->lastError().text();
+    }
     qTable->record().clear();
 }

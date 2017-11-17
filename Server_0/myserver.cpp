@@ -8,8 +8,9 @@
 #include <QTime>
 #include "handler.h"
 
-MyServer::MyServer(int nPort, QWidget* pwgt /*=0*/) : QWidget(pwgt)
+MyServer::MyServer(int nPort, Handler & res, QWidget* pwgt /*=0*/) : QWidget(pwgt)
                                                     , m_nNextBlockSize(0)
+                                                    , response(&res)
 {
     m_ptcpServer = new QTcpServer(this);
     if (!m_ptcpServer->listen(QHostAddress::Any, nPort)) {
@@ -66,18 +67,15 @@ void MyServer::slotReadClient()
         }
         QTime   time;
         QString str;
-        Handler response;
         in >> time >> str;
 
         QString strMessage =
-            response.Setfunc(str);
-        m_ptxt->append(strMessage);
+            response->Setfunc(str);
+        m_ptxt->append(strMessage + time.toString());
 
         m_nNextBlockSize = 0;
 
-        sendToClient(pClientSocket,
-                     "Server Response: Received \"" + str + "\""
-                    );
+        sendToClient(pClientSocket, strMessage);
     }
 }
 
