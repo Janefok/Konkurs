@@ -5,6 +5,7 @@ import QtQuick.Controls.Styles 1.4
 import QtQuick.Dialogs 1.2
 import QtQuick.Layouts 1.3
 import "C:/Users/darkk/Documents/GitHub/Konkurs/Client/NewTabButton.qml"
+import QtQml.Models 2.2
 
 
 ApplicationWindow {
@@ -15,66 +16,76 @@ ApplicationWindow {
     Material.theme: Material.Dark
     //Material.accent: Material.LightGreen
 
-    footer: TabBar{
-        id: tabBar
-        width: parent.width
-        TabButton{
-            text: "First"
-        }
-        TabButton{
-            text: "Second"
-        }
-        NewTabButton{
-            text: "test"
+//     header: Item{
+//        id: toolBar
+
+//        Loader{
+//            id:search
+//            width: parent.width
+//            height: 40
+//            //anchors.fill: on
+//            //anchors.fill: parent
+//            source: "SearchData.qml"
+
+//            }
+//        }
+    Rectangle{
+        color: "#4d4d4d"
+        anchors.fill: parent
+
+        Loader {
+            id: loader
+            //anchors.fill: parent
+            width: parent.width
+            //Layout.top: view.bottom
+            source: "ListViewMenu.qml"
         }
 
-    }
-    StackLayout{
-        width: parent.width
-        currentIndex: tabBar.currentIndex
-        Item{
-            id:firstTab
-            VisualItemModel{
-                id: dataV
-                Rectangle{
-                    id: firstR
-                    //anchors.top: header.bottom
-                    width: applicationWindow.width
-                    height: 100
-                    border.color: "#111111"
-                    border.width: 3
-                }
-                Rectangle{
-                    id: secondR
-                    anchors.top: firstR.bottom
-                    height: 100
-                    border.color: "#111111"
-                    border.width: 3
-                }
-            }
-            ListView{
-                id: listViewData
-                anchors.fill: parent
-                anchors.top: parent.top
-                anchors.bottom: parent.bottom
-                anchors.left: parent.left
-                anchors.right: parent.right
-                model: dataV
-                //snapMode: ListView.SnapOneItem
-                orientation: ListView.Vertical
-                //boundsBehavior: Flickable.StopAtBounds
-            }
-
-
-        }
-        Item {
-            id: secondTab
-        }
-        Item {
-            id: thirdTab
-        }
-    }
 }
+        footer: TabBar{
+            id: tabBar
+            width: parent.width
+            TabButton{
+                text: "First"
+            }
+            TabButton{
+                text: "Second"
+            }
+            NewTabButton{
+                text: "test"
+            }
+            onCurrentIndexChanged: {
+                switch (currentIndex)
+                {
+                    case 0:
+                        loader.source = "ListViewMenu.qml"
+                        //search.source = "SearchData.qml"
+                        break;
+                    case 1:
+                        loader.source = "qrc:/Test_2.qml"
+                        break;
+                }
+            }
+        }
+
+
+//    StackLayout{
+//        width: parent.width
+//        currentIndex: tabBar.currentIndex
+//        anchors.fill: parent
+
+
+
+ }
+
+//        Item {
+//            id: secondTab
+//        }
+//        Item {
+//            id: thirdTab
+//        }
+//    }
+//}
 
 //    Rectangle{
 //        //Material.theme: Material.Dark

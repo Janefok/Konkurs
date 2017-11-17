@@ -50,7 +50,8 @@ DISTFILES += \
     MenuBar.qml \
     PersonMenu.qml \
     ListViewMenu.qml \
-    NewTabButton.qml
+    NewTabButton.qml \
+    SearchData.qml
 
 QML_IMPORT_PATH = "C:\Qt\5.8\mingw53_32\qml\QtQuick\Controls.2\Material"
 QML_IMPORT_PATH = "C:\Users\darkk\Documents\GitHub\Konkurs\Client"
