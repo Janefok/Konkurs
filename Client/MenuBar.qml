@@ -29,19 +29,19 @@ ApplicationWindow {
 
 //            }
 //        }
-    Rectangle{
-        color: "#4d4d4d"
-        anchors.fill: parent
+//    Rectangle{
+//        color: "#4d4d4d"
+//        anchors.fill: parent
 
         Loader {
             id: loader
-            //anchors.fill: parent
+            anchors.fill: parent
             width: parent.width
             //Layout.top: view.bottom
             source: "ListViewMenu.qml"
         }
 
-}
+//    }
         footer: TabBar{
             id: tabBar
             width: parent.width
