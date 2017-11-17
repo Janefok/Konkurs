@@ -4,8 +4,8 @@
 =======
 Server_0/Server_0.pro.user
 Client/Client.pro.user.3f34610
-build-Client-Desktop_Qt_5_8_0_MinGW_32bit-Debug/Makefile.Debug
-build-Client-Desktop_Qt_5_8_0_MinGW_32bit-Debug/Makefile.Release
+build-Client-Desktop_Qt_5_8_0_MinGW_32bit-Debug/
+build-Client-Desktop_Qt_5_8_0_MinGW_32bit-Debug/
 =======
 >>>>>>> master
 
