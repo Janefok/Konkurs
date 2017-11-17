@@ -6,28 +6,26 @@ Handler::Handler()
 }
 
 QString Handler::Setfunc(QString str){
-    QString Result;
+    QVariantMap tabledata;
+    QVariantList tabledataList;
+    QJsonArray res;
     bd->open();
     if(str == "LOAD/Users"){
-        //Table users( bd->setTable("Users") );
-//        users.select();
-//        while (users.next()) {
-//             qDebug() << users.getValue("Surname").toString();
-//             qDebug() << users.getValue("DateOfChange").toString();
-//             qDebug() << users.getValue("Gender").toString();
-//         }
-//          users.setValue("Surname", "Admin");
-//          users.select();
-//          while (users.next()) {
-//               qDebug() << users.getValue("Surname").toString();
-//               qDebug() << users.getValue("DateOfChange").toString();
-//               qDebug() << users.getValue("Gender").toString();
-//           }
-//          users.setValue("Surname", "NewName");
-//          users.setValue("DateOfChange", "12.12.12");
-//          users.setValue("Gender", "M");
-//          users.insertLine();
+        Table users( bd->setTable("Users") );
+        users.select();
+        while (users.next()) {
+           tabledata.insert("Surname", users.getValue("Surname").toString());
+           tabledata.insert("DateOfChange", users.getValue("DateOfChange").toString());
+           tabledata.insert("Gender", users.getValue("Gender").toString());
+            tabledataList << tabledata;
+         }
     }
+    res.fromVariantList(tabledataList);
+    qDebug()<< res.size();
+    QJsonDocument json (res);
+    QString Result(json.toJson(QJsonDocument::Compact));
+
+    qDebug()<< json;
     bd->close();
  return Result;
 }
