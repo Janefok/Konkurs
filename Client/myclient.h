@@ -16,20 +16,13 @@ private:
 public:
     MyClient(const QString& strHost, int nPort, QWidget* pwgt = 0) ;
 
-<<<<<<< HEAD
    public slots:
     void slotSendToServer(QString str);
 
 private slots:
     void slotReadyRead   (                            );
-    void slotError       (QAbstractSocket::SocketError);
-=======
-public slots:
-    void slotSendToServer(QString str);
-private slots:
-    void slotReadyRead   (                            );
-    void slotError       (QAbstractSocket::SocketError);   
->>>>>>> Korshun
+    void slotError       (QAbstractSocket::SocketError); 
+
     void slotConnected   (                            );
 };
 

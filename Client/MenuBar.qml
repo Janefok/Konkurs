@@ -4,7 +4,7 @@ import QtQuick.Controls.Material 2.1
 import QtQuick.Controls.Styles 1.4
 import QtQuick.Dialogs 1.2
 import QtQuick.Layouts 1.3
-import "C:/Users/darkk/Documents/GitHub/Konkurs/Client/NewTabButton.qml"
+import "D:/Users/darkk/Documents/GitHub/Konkurs/Client/NewTabButton.qml"
 import QtQml.Models 2.2
 
 

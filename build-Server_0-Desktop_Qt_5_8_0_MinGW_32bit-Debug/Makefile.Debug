@@ -361,7 +361,6 @@ debug/moc_myserver.cpp: ../../Qt/5.8/mingw53_32/include/QtWidgets/QWidget \
 		../../Qt/5.8/mingw53_32/include/QtWidgets/QTableView \
 		../../Qt/5.8/mingw53_32/include/QtWidgets/qtableview.h \
 		../../Qt/5.8/mingw53_32/include/QtCore/QJsonDocument \
-		../../Qt/5.8/mingw53_32/include/QtCore/QJsonObject \
 		../../Qt/5.8/mingw53_32/include/QtCore/QJsonArray \
 		../Server_0/myserver.h \
 		debug/moc_predefs.h \
@@ -643,7 +642,6 @@ debug/main.o: ../Server_0/main.cpp ../Server_0/myserver.h \
 		../../Qt/5.8/mingw53_32/include/QtWidgets/QTableView \
 		../../Qt/5.8/mingw53_32/include/QtWidgets/qtableview.h \
 		../../Qt/5.8/mingw53_32/include/QtCore/QJsonDocument \
-		../../Qt/5.8/mingw53_32/include/QtCore/QJsonObject \
 		../../Qt/5.8/mingw53_32/include/QtCore/QJsonArray \
 		../../Qt/5.8/mingw53_32/include/QtWidgets/QApplication \
 		../../Qt/5.8/mingw53_32/include/QtWidgets/qapplication.h \
@@ -906,7 +904,6 @@ debug/myserver.o: ../Server_0/myserver.cpp ../Server_0/myserver.h \
 		../../Qt/5.8/mingw53_32/include/QtWidgets/QTableView \
 		../../Qt/5.8/mingw53_32/include/QtWidgets/qtableview.h \
 		../../Qt/5.8/mingw53_32/include/QtCore/QJsonDocument \
-		../../Qt/5.8/mingw53_32/include/QtCore/QJsonObject \
 		../../Qt/5.8/mingw53_32/include/QtCore/QJsonArray \
 		../../Qt/5.8/mingw53_32/include/QtNetwork/QTcpServer \
 		../../Qt/5.8/mingw53_32/include/QtNetwork/qtcpserver.h \
@@ -1440,7 +1437,6 @@ debug/handler.o: ../Server_0/handler.cpp ../Server_0/handler.h \
 		../../Qt/5.8/mingw53_32/include/QtWidgets/QTableView \
 		../../Qt/5.8/mingw53_32/include/QtWidgets/qtableview.h \
 		../../Qt/5.8/mingw53_32/include/QtCore/QJsonDocument \
-		../../Qt/5.8/mingw53_32/include/QtCore/QJsonObject \
 		../../Qt/5.8/mingw53_32/include/QtCore/QJsonArray
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o debug\handler.o ..\Server_0\handler.cpp
 
