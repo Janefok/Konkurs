@@ -48,6 +48,8 @@ build-Client-Desktop_Qt_5_8_0_MinGW_32bit-Debug/debug/Client.exe
 Client/Client.pro.user.3f34610
 >>>>>>> Korshun
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
 *.o
 <<<<<<< HEAD
 Client/Client.pro.user
@@ -62,6 +64,7 @@ build-Server_0-Desktop_Qt_5_8_0_MinGW_32bit-Debug/debug/moc_myserver.o
 build-Server_0-Desktop_Qt_5_8_0_MinGW_32bit-Debug/debug/myserver.o
 build-Server_0-Desktop_Qt_5_8_0_MinGW_32bit-Debug/debug/Server_0.exe
 =======
+>>>>>>> master
 >>>>>>> master
 build-Client-Qt_5_8_0_mingw53_32-Debug/debug/moc_myclient.cpp
 build-Client-Qt_5_8_0_mingw53_32-Debug/debug/moc_myclient.cpp
@@ -78,8 +81,28 @@ build-Client-Qt_5_8_0_mingw53_32-Debug/Makefile.Release
 build-Server_0-Qt_4_8_6-Debug/debug/Server_0.exe
 build-Client-Qt_5_8_0_mingw53_32-Debug/debug/moc_myclient.cpp
 build-Client-Qt_5_8_0_mingw53_32-Debug/Makefile.Release
+<<<<<<< HEAD
+=======
+*.o
+Client/Client.pro.user
+Client/Client.pro.user
+Client/MenuBar.qmlc
+Client/PersonMenu.qmlc
+>>>>>>> master
+=======
 >>>>>>> Korshun
 Client/SearchData.qmlc
 *.qml
 >>>>>>> cd1103bd3d68bfe9e2b7acc410db40c883465b74
+<<<<<<< HEAD
 Client/Client.pro.user
+=======
+>>>>>>> master
+*.qmlc
+*.exe
+*.o
+>>>>>>> Korshun
+*.exe
+build-Client-Desktop_Qt_5_8_0_MinGW_32bit-Debug/debug/Client.exe
+Client/Client.pro.user
+*.qmlc
