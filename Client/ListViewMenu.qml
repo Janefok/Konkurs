@@ -9,15 +9,20 @@ Item{
            color: "white"
            //text: "first"
            name: "Alexeev"
+           preName: "Dmitrij"
+           lastName:"Seergeevich"
            facultet: "IKT"
            sport: "Tennis"
        }
        ListElement {
            name: "Fokina"
+           preName: "Evgenia"
+           lastName:"Alexeevna"
            facultet: "IKT"
            sport: "Tennis"
            color: "white"
        }
+
     }
 
     Column{
@@ -29,8 +34,7 @@ Item{
            height: 40
            Loader{
                id:search
-               width: windowList.width
-               //height: 40
+               width: columnList.width
                anchors.fill: parent
                source: "SearchData.qml"
            }
@@ -50,19 +54,62 @@ Item{
                delegate: Rectangle {
                    width: view.width
                    height: 80
-                   //anchors.horizontalCenter: parent.horizontalCenter
                    color: 'white'
                    radius: 10
                    border.color: "#4d4d4d"
+                   Row{
+                       anchors.fill:parent
 
-                   Text {
-                       anchors.centerIn: parent
-                       renderType: Text.NativeRendering
-                       text: name + "   " + facultet + "    " + sport
-                       font.pixelSize: 14
+                       spacing: 20
+                       anchors.leftMargin: 10
+                       Column{
+                           spacing: 5
+                           Text {
+                               id: nm
+                               //anchors.centerIn: parent
+                               renderType: Text.NativeRendering
+                               //text: name + "   " + facultet + "    " + sport
+                               text:name
+                               font.pixelSize: 14
+
+                           }
+                           Text {
+                               id: prN
+                               //anchors.centerIn: parent
+                               renderType: Text.NativeRendering
+                               //text: name + "   " + facultet + "    " + sport
+                               text:preName
+                               font.pixelSize: 11
+
+                           }
+                           Text {
+                               id: lN
+                               //anchors.centerIn: parent
+                               renderType: Text.NativeRendering
+                               //text: name + "   " + facultet + "    " + sport
+                               text:lastName
+                               font.pixelSize: 11
+
+                           }
+                       }
+                       Text {
+                           id: fac
+                           //anchors.left: nm.right
+
+                           font.pixelSize: 14
+
+                           text: facultet
+                       }
+                       Text {
+                           id: st
+                           //width: :
+                           //anchors.left: fac.right
+                           text: sport
+                           font.pixelSize: 14
+
+                       }
 
                    }
-
                 }
             }
         }
