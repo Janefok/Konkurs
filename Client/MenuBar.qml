@@ -4,7 +4,6 @@ import QtQuick.Controls.Material 2.1
 import QtQuick.Controls.Styles 1.4
 import QtQuick.Dialogs 1.2
 import QtQuick.Layouts 1.3
-import "D:/Users/darkk/Documents/GitHub/Konkurs/Client/NewTabButton.qml"
 import QtQml.Models 2.2
 
 
@@ -22,32 +21,7 @@ ApplicationWindow {
         source: "ListViewMenu.qml"
     }
 
-    footer: TabBar{
-        id: tabBar
-        width: parent.width
-        TabButton{
-            text: "First"
-        }
-        TabButton{
-            text: "Second"
-        }
-        NewTabButton{
-            text: "test"
-        }
-        onCurrentIndexChanged: {
-            switch (currentIndex)
-            {
-                case 0:
-                    loader.source = "ListViewMenu.qml"
-                    //search.source = "SearchData.qml"
-                    break;
-                case 1:
-                    loader.source = "qrc:/Test_2.qml"
-                    break;
-            }
-        }
-    }
-
+    footer: TabButtons{}
 
 //    StackLayout{
 //        width: parent.width

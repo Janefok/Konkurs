@@ -44,12 +44,11 @@ FORMS += \
 
 
 DISTFILES += \
-    main.qml \
     MenuBar.qml \
     PersonMenu.qml \
     ListViewMenu.qml \
-    NewTabButton.qml \
-    SearchData.qml
+    SearchData.qml \
+    TabButtons.qml
 
 QML_IMPORT_PATH = "D:\Qt\5.8\mingw53_32\qml\QtQuick\Controls.2\Material"
 QML_IMPORT_PATH = "D:\Konkurs\Client"

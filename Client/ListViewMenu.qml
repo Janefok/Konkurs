@@ -29,7 +29,7 @@ Item{
            height: 40
            Loader{
                id:search
-               width: windowList.width
+               //width: windowList.width
                //height: 40
                anchors.fill: parent
                source: "SearchData.qml"
