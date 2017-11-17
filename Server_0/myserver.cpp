@@ -71,13 +71,11 @@ void MyServer::slotReadClient()
 
         QString strMessage =
             response->Setfunc(str);
-        m_ptxt->append(strMessage);
+        m_ptxt->append(strMessage + time.toString());
 
         m_nNextBlockSize = 0;
 
-        sendToClient(pClientSocket,
-                     "Server Response: Received \"" + str + "\""
-                    );
+        sendToClient(pClientSocket, strMessage);
     }
 }
 
