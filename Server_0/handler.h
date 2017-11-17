@@ -2,6 +2,8 @@
 #define HANDLER_H
 
 #include "base.h"
+#include <QJsonDocument>
+#include <QJsonArray>
 
 class Handler
 {
