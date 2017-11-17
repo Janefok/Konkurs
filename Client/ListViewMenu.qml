@@ -4,27 +4,25 @@ import QtQuick.Controls.Material 2.1
 
 Item{
     ListModel {
-           id: dataModel
-
-           ListElement {
-               color: "white"
-               //text: "first"
-               name: "Alexeev"
-               facultet: "IKT"
-               sport: "Tennis"
-           }
-           ListElement {
-               name: "Fokina"
-               facultet: "IKT"
-               sport: "Tennis"
-               color: "white"
-           }
+       id: dataModel
+       ListElement {
+           color: "white"
+           //text: "first"
+           name: "Alexeev"
+           facultet: "IKT"
+           sport: "Tennis"
+       }
+       ListElement {
+           name: "Fokina"
+           facultet: "IKT"
+           sport: "Tennis"
+           color: "white"
+       }
     }
 
     Column{
        id: columnList
        width: parent.width
-       spacing: 10
        //Toolbar
        Rectangle{
            width: parent.width
