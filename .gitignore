@@ -1,18 +1,53 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
 Server_0/Server_0.pro.user
 Client/Client.pro.user.3f34610
 build-Client-Desktop_Qt_5_8_0_MinGW_32bit-Debug/Makefile.Debug
 build-Client-Desktop_Qt_5_8_0_MinGW_32bit-Debug/Makefile.Release
 =======
+>>>>>>> master
 
 Server_0/Server_0.pro.user
-Client/Client.pro.user
 Server_0/Server_0.pro.user
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+build-Client-Qt_5_8_0_mingw53_32-Debug/debug/Client.exe
+=======
+Server_0/Server_0.pro.user
+Client/Client.pro.user.3f34610
+build-Client-Desktop_Qt_5_8_0_MinGW_32bit-Debug/Makefile.Debug
+build-Client-Desktop_Qt_5_8_0_MinGW_32bit-Debug/Makefile.Release
+>>>>>>> master
+build-Client-Desktop_Qt_5_8_0_MinGW_32bit-Debug/Makefile.Release
+build-Client-Desktop_Qt_5_8_0_MinGW_32bit-Debug/Makefile.Debug
+*.Debug
+Server_0/Server_0.pro.user
+Server_0/Server_0.pro.user
+Server_0/base.h
+Client/debug/Client.exe
+Client/debug/main.o
+Client/debug/myclient.o
+Client/ic_assignment_ind_black_24dp.zip
+Client/Makefile
+Client/Makefile.Debug
+Client/Makefile.Release
+=======
+Client/Client.pro.user
+build-Client-Desktop_Qt_5_8_0_MinGW_32bit-Debug/debug/Client.exe
+Client/Client.pro.user.3f34610
+>>>>>>> 1b1127b37aaee72f653247e7d520a6dbde3d7a62
+build-Client-Desktop_Qt_5_8_0_MinGW_32bit-Debug/debug/Client.exe
+Client/MenuBar.qmlc
+*.o
+=======
 Client/Client.pro.user
 build-Client-Desktop_Qt_5_8_0_MinGW_32bit-Debug/debug/Client.exe
 Client/Client.pro.user.3f34610
 >>>>>>> Korshun
+<<<<<<< HEAD
 *.o
 build-Server_0-Desktop_Qt_5_8_0_MinGW_32bit-Debug/debug/base.o
 build-Server_0-Desktop_Qt_5_8_0_MinGW_32bit-Debug/debug/base.o
@@ -20,3 +55,21 @@ build-Server_0-Desktop_Qt_5_8_0_MinGW_32bit-Debug/debug/main.o
 build-Server_0-Desktop_Qt_5_8_0_MinGW_32bit-Debug/debug/moc_myserver.o
 build-Server_0-Desktop_Qt_5_8_0_MinGW_32bit-Debug/debug/myserver.o
 build-Server_0-Desktop_Qt_5_8_0_MinGW_32bit-Debug/debug/Server_0.exe
+=======
+>>>>>>> master
+build-Client-Qt_5_8_0_mingw53_32-Debug/debug/moc_myclient.cpp
+build-Client-Qt_5_8_0_mingw53_32-Debug/debug/moc_myclient.cpp
+build-Client-Qt_5_8_0_mingw53_32-Debug/debug/moc_myclient.cpp
+build-Client-Qt_5_8_0_mingw53_32-Debug/Makefile.Release
+build-Server_0-Qt_4_8_6-Debug/debug/Server_0.exe
+Client/MenuBar.qmlc
+Client/NewTabButton.qmlc
+Client/PersonMenu.qmlc
+Client/TabBar.qmlc
+Client/TabButt.qmlc
+build-Server_0-Qt_4_8_6-Debug/debug/Server_0.exe
+build-Client-Qt_5_8_0_mingw53_32-Debug/Makefile.Release
+build-Server_0-Qt_4_8_6-Debug/debug/Server_0.exe
+build-Client-Qt_5_8_0_mingw53_32-Debug/debug/moc_myclient.cpp
+build-Client-Qt_5_8_0_mingw53_32-Debug/Makefile.Release
+>>>>>>> Korshun

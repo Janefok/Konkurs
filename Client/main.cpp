@@ -8,8 +8,13 @@ int main(int argc, char *argv[])
 
     MyClient     client("localhost", 2323);
 
+<<<<<<< HEAD
     client.slotSendToServer("LOAD/Users");
     client.slotSendToServer("ВторойЕВгения");
+=======
+    client.slotSendToServer("ХУЙ\ds\sd\sdba\brt\KOrsh");
+    client.slotSendToServer("reyw\ds\sd\sdba\brt\MeinHerzbrennt");
+>>>>>>> Korshun
 
     //подключение qml
     QQmlApplicationEngine engine;

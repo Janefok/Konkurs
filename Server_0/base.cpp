@@ -7,11 +7,11 @@ Base::Base(QString DBName)
     gDataBaseName = DBName;
 }
 
-Base::close(){
+void Base::close(){
     dbase.close();
 }
 
-Base::open(){
+void Base::open(){
     if (!dbase.open()) {
         qDebug() << "DataBase is not connected";
     } else { qDebug() << "DataBase is connected";}
@@ -19,7 +19,7 @@ Base::open(){
 
 QSqlTableModel& Base::setTable(QString lTableName){
 
-    QSqlTableModel *model = new QSqlTableModel(Q_NULLPTR, dbase);
+    QSqlTableModel *model = new QSqlTableModel(0, dbase);
 
     model->setTable(lTableName);
 

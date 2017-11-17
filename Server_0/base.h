@@ -12,8 +12,8 @@ protected:
     QString gDataBaseName;
 public:
     Base(QString);
-    close();
-    open();
+    void close();
+    void open();
     QSqlTableModel & setTable(QString);
 };
 
