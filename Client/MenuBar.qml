@@ -65,6 +65,7 @@ ApplicationWindow {
         }
     }
 
+    footer: TabButtons{}
 
 //    StackLayout{
 //        width: parent.width

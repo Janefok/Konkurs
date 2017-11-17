@@ -2,6 +2,7 @@
 #define MYSERVER_H
 
 #include <QWidget>
+#include "handler.h"
 
 class QTcpServer;
 class QTextEdit;
@@ -13,10 +14,11 @@ private:
     QTcpServer* m_ptcpServer;
     QTextEdit*  m_ptxt;
     quint16     m_nNextBlockSize;
+    Handler *   response = 0;
 
      void sendToClient(QTcpSocket* pSocket, const QString& str);
 public:
-    MyServer(int nPort, QWidget* pwgt = 0);
+    MyServer(int nPort,Handler &res, QWidget* pwgt = 0);
 
 public slots:
     virtual void slotNewConnection();
