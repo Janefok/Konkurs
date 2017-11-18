@@ -210,7 +210,6 @@ Makefile: Server_0.pro D:/QT59/5.9.1/mingw53_32/mkspecs/win32-g++/qmake.conf D:/
 		D:/QT59/5.9.1/mingw53_32/mkspecs/features/qt_config.prf \
 		D:/QT59/5.9.1/mingw53_32/mkspecs/win32-g++/qmake.conf \
 		D:/QT59/5.9.1/mingw53_32/mkspecs/features/spec_post.prf \
-		../.qmake.stash \
 		D:/QT59/5.9.1/mingw53_32/mkspecs/features/exclusive_builds.prf \
 		D:/QT59/5.9.1/mingw53_32/mkspecs/features/toolchain.prf \
 		D:/QT59/5.9.1/mingw53_32/mkspecs/features/default_pre.prf \
@@ -390,7 +389,6 @@ D:/QT59/5.9.1/mingw53_32/mkspecs/features/qt_functions.prf:
 D:/QT59/5.9.1/mingw53_32/mkspecs/features/qt_config.prf:
 D:/QT59/5.9.1/mingw53_32/mkspecs/win32-g++/qmake.conf:
 D:/QT59/5.9.1/mingw53_32/mkspecs/features/spec_post.prf:
-../.qmake.stash:
 D:/QT59/5.9.1/mingw53_32/mkspecs/features/exclusive_builds.prf:
 D:/QT59/5.9.1/mingw53_32/mkspecs/features/toolchain.prf:
 D:/QT59/5.9.1/mingw53_32/mkspecs/features/default_pre.prf:
@@ -430,6 +428,7 @@ all: release-all debug-all  FORCE
 clean: release-clean debug-clean  FORCE
 distclean: release-distclean debug-distclean  FORCE
 	-$(DEL_FILE) Makefile
+	-$(DEL_FILE) .qmake.stash
 
 release-mocclean:
 	$(MAKE) -f $(MAKEFILE).Release mocclean
