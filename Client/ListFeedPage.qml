@@ -1,5 +1,6 @@
 import QtQuick 2.7
 import QtQuick.Layouts 1.3
+import QtQuick.Controls 2.1
 import QtQuick.Controls.Material 2.1
 
 Item{
@@ -119,5 +120,29 @@ Item{
                 }
             }
         }
+    }
+
+    RoundButton {
+        id:addTeam
+        anchors.bottom: parent.bottom
+        anchors.right: parent.right
+        anchors.bottomMargin: 10
+        anchors.rightMargin: view.width/2 - 10
+        anchors.horizontalCenter: parent.footer
+        Text {
+            id: plus
+            font.pixelSize: 40
+            anchors.centerIn: parent
+            color: "white"
+            text: "+"
+        }
+        //radius: 50
+        //background: Rectangle{
+        //    radius: 80
+         //   color: "lightblue"
+        //}
+//        style:ButtonStyle{
+//            color:"lightblue"
+//        }
     }
 }

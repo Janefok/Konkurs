@@ -11,10 +11,18 @@ import QtQml.Models 2.2
         //anchors.fill: parent
         anchors.bottom: parent.bottom
         anchors.right: parent.right
-        anchors.bottomMargin: 5
-        anchors.rightMargin: 5
+        anchors.bottomMargin: 10
+        anchors.rightMargin: view.width/2 - 10
         anchors.horizontalCenter: parent.footer
-        //radius: 10
+        //anchors.centerIn: parent.bottom
+        Text {
+            id: plus
+            font.pixelSize: 40
+            anchors.centerIn: parent
+            color: "white"
+            text: "+"
+        }
+        radius: 30
 //        background: Rectangle{
 //            //radius:10
 //            color: "lightblue"
@@ -23,5 +31,4 @@ import QtQml.Models 2.2
 //            color:"lightblue"
 //        }
     }
-
 

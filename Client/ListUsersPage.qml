@@ -146,7 +146,33 @@ Item{
             }   //end of ListView
         }   //end of Rectangle
     }   //end of Column (with ToolBar & ListUsersPage)
-    CenterButton{}
+
+    RoundButton{
+        id:addPersons
+        //anchors.fill: parent
+        anchors.bottom: parent.bottom
+        anchors.right: parent.right
+        anchors.bottomMargin: 10
+        anchors.rightMargin: view.width/2 - 10
+        anchors.horizontalCenter: parent.footer
+        //anchors.centerIn: parent.bottom
+        Text {
+            id: plus
+            font.pixelSize: 40
+            anchors.centerIn: parent
+            color: "white"
+            text: "+"
+        }
+        radius: 30
+//        background: Rectangle{
+//            //radius:10
+//            color: "lightblue"
+//        }
+//        style:ButtonStyle{
+//            color:"lightblue"
+//        }
+    }
+
     StackView{
         id:stackUsersPage
         initialItem: buttonList
