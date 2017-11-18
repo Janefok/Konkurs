@@ -33,7 +33,6 @@ SOURCES += \
         main.cpp \
         mainwindow.cpp \
     myclient.cpp \
-    main.cpp
 
 HEADERS += \
         mainwindow.h \
@@ -50,8 +49,30 @@ DISTFILES += \
     ListViewMenu.qml \
     mainWindow.qml \
     SearchData.qml \
-    TabButtons.qml
+    TabButtons.qml \
+    FeedPage.qml \
+    FrameMain.qml \
+    ListUsersPage.qml \
+    StatisticsPage.qml \
+    CenterButton.qml \
+    UserPage.qml
 
-QML_IMPORT_PATH = "D:\Qt\5.8\mingw53_32\qml\QtQuick\Controls.2\Material"
-QML_IMPORT_PATH = "D:\Konkurs\Client"
+QML_IMPORT_PATH = "С:\Qt\5.8\mingw53_32\qml\QtQuick\Controls.2\Material"
+QML_IMPORT_PATH = "C:\Users\darkk\Documents\GitHub\Konkurs\Client"
+QML_IMPORT_PATH = "C:\Qt\5.9.2\android_armv7\qml\QtQuick\Controls.2\Material"
+QML_IMPORT_PATH = "C:\Qt\5.9.2\android_armv7\qml\QtQuick\Extras"
+QML_IMPORT_PATH = "C:\Qt\5.9.2\android_armv7\qml\QtQuick\Controls"
 
+QML_IMPORT_PATH = "C:\Qt\5.9.2\android_x86\qml\QtQuick\Extras"
+QML_IMPORT_PATH = "C:\Qt\5.9.2\android_x86\qml\QtQuick\Controls"
+QML_IMPORT_PATH = "C:\Qt\5.9.2\android_x86\qml\QtQuick\Controls.2\Material"
+
+DISTFILES +=
+android-build/gradle/wrapper/gradle-wrapper.jar
+android-build/AndroidManifest.xml
+android-build/res/values/libs.xml
+android-build/build.gradle
+android-build/gradle/wrapper/gradle-wrapper.properties
+android-build/gradlew
+android-build/gradlew.bat
+ANDROID_PACKAGE_SOURCE_DIR = $$PWD/android-build

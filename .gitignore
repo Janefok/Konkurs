@@ -2,9 +2,13 @@
 build-* 
 *user.* 
 *.exe 
+*android-build*
 *.o 
 build* 
 *.qmlc 
 *.stash 
 *.pro 
 *.user
+*.obj
+*.stash
+Client/android-libClient.so-deployment-settings.json
