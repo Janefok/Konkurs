@@ -1,8 +1,90 @@
+<<<<<<< HEAD
 *.Debug
+=======
+
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+Server_0/Server_0.pro.user
+Client/Client.pro.user.3f34610
+build-Client-Desktop_Qt_5_8_0_MinGW_32bit-Debug/Makefile.Debug
+build-Client-Desktop_Qt_5_8_0_MinGW_32bit-Debug/Makefile.Release
+=======
+>>>>>>> master
+
+Server_0/Server_0.pro.user
+Server_0/Server_0.pro.user
+Client/Client.pro.user.3f34610
+build-Client-Desktop_Qt_5_8_0_MinGW_32bit-Debug/Makefile.Debug
+build-Client-Desktop_Qt_5_8_0_MinGW_32bit-Debug/Makefile.Release
+*.Debug
+Server_0/Server_0.pro.user
+Server_0/Server_0.pro.user
+Server_0/base.h
+Client/debug/main.o
+Client/debug/myclient.o
+Client/ic_assignment_ind_black_24dp.zip
+>>>>>>> 6ec42372066bd58f71d6ba7703722d25e229ba82
 Client/Makefile
 Client/Makefile.Release
+<<<<<<< HEAD
 *user.*
 *.exe
 *.o
 build*
 *.qmlc
+=======
+=======
+Client/Client.pro.user
+
+Client/Client.pro.user.3f34610
+
+*.o
+=======
+Client/Client.pro.user
+
+Client/Client.pro.user.3f34610
+>>>>>>> Korshun
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+*.o
+<<<<<<< HEAD
+Client/Client.pro.user
+Client/Client.pro.user
+
+=======
+build-Server_0-Desktop_Qt_5_8_0_MinGW_32bit-Debug/debug/base.o
+build-Server_0-Desktop_Qt_5_8_0_MinGW_32bit-Debug/debug/base.o
+build-Server_0-Desktop_Qt_5_8_0_MinGW_32bit-Debug/debug/main.o
+build-Server_0-Desktop_Qt_5_8_0_MinGW_32bit-Debug/debug/moc_myserver.o
+build-Server_0-Desktop_Qt_5_8_0_MinGW_32bit-Debug/debug/myserver.o
+
+=======
+>>>>>>> master
+>>>>>>> master
+build-Client-Qt_5_8_0_mingw53_32-Debug/debug/moc_myclient.cpp
+build-Client-Qt_5_8_0_mingw53_32-Debug/debug/moc_myclient.cpp
+build-Client-Qt_5_8_0_mingw53_32-Debug/debug/moc_myclient.cpp
+build-Client-Qt_5_8_0_mingw53_32-Debug/Makefile.Release
+
+build-Client-Qt_5_8_0_mingw53_32-Debug/Makefile.Release
+
+build-Client-Qt_5_8_0_mingw53_32-Debug/debug/moc_myclient.cpp
+build-Client-Qt_5_8_0_mingw53_32-Debug/Makefile.Release
+<<<<<<< HEAD
+=======
+*.o
+Client/Client.pro.user
+Client/Client.pro.user
+
+>>>>>>> cd1103bd3d68bfe9e2b7acc410db40c883465b74
+<<<<<<< HEAD
+Client/Client.pro.user
+=======
+>>>>>>> master
+*.qmlc
+*.exe
+*.o
+Client/Client.pro.user
+>>>>>>> 6ec42372066bd58f71d6ba7703722d25e229ba82
