@@ -36,7 +36,8 @@ SOURCES += \
 
 HEADERS += \
         mainwindow.h \
-    myclient.h
+    myclient.h \
+    parsejson.h
 
 FORMS += \
         mainwindow.ui
