@@ -9,10 +9,9 @@ int main(int argc, char *argv[])
     MyClient     client("localhost", 2323);
 
     client.slotSendToServer("LOAD/Users");
-    client.slotSendToServer("ВторойЕВгения");
 
     //подключение qml
     QQmlApplicationEngine engine;
-    engine.load(QUrl(QLatin1String("MenuBar.qml")));
+    engine.load(QUrl(QLatin1String("FrameMain.qml")));
     return a.exec();
 }
