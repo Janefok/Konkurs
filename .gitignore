@@ -8,3 +8,4 @@ build*
 *.stash
 *.pro
 *.pro
+*.user
