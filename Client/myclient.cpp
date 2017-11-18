@@ -6,13 +6,9 @@
 #include <QLabel>
 #include <QTime>
 #include <QQmlApplicationEngine>
+#include "parseJson.h"
 
-
-MyClient::MyClient(const QString& strHost,
-                   int            nPort,
-                   QWidget*       pwgt /*=0*/
-                  ) : QWidget(pwgt)
-                    , m_nNextBlockSize(0)
+MyClient::MyClient(const QString& strHost, int nPort, QWidget* pwgt) : QWidget(pwgt), m_nNextBlockSize(0)
 {
     //подключение qml
     //QQmlApplicationEngine engine;
@@ -64,8 +60,14 @@ void MyClient::slotReadyRead()
         QTime   time;
         QString str;
         in >> time >> str;
+//         qDebug() << (time.toString() + " " + str);
 
-         qDebug() << (time.toString() + " " + str);
+        //когда чота пришло - парсим его и пишем в специальный объект
+         QList<QMap<QString, QVariant>> jsonListMap;
+         if (str != "Server Response: Connected!" && !str.isEmpty()){
+            jsonListMap = decomposeMyJson(str);
+            qDebug() << jsonListMap;
+         }
         m_nNextBlockSize = 0;
     }
 }
@@ -101,3 +103,4 @@ void MyClient::slotConnected()
 {
      qDebug() << "Received the connected() signal";
 }
+
