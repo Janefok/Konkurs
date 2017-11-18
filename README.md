@@ -1,2 +1,0 @@
-# Konkurs
-hallo, yopta!
