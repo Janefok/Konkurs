@@ -37,11 +37,16 @@ Rectangle {
 
             name: "IUOIUOUOU"
         }
-        Text{
+        TextField{
             text: "ksKKKKKKKKKKK"
         }
         Button{
-            onClicked: userdata.setName()
+            onClicked{
+                omSetName: {
+                    
+                }
+            }
+                
         }
 
     }

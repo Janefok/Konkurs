@@ -25,13 +25,15 @@ Item{
 
     Column{
        id: columnList
-       width: parent.width
+        width: parent.width
 
        //List - как я поняла это область где рендерится весь список
        Rectangle{
            color: "#e6e6e6"
            width: parent.width
            height: 400
+
+
            ListView {
                id: view
                width: parent.width
@@ -41,7 +43,10 @@ Item{
 
                delegate: Rectangle {
                    width: view.width
-                   height: 90
+                   //height: 90
+                   height: nm.contentHeight + prN.contentHeight + 40
+                   //if(nm.)
+                   //contentHeigh:
                    color: 'white'
                    border.color: "#cccccc"
 
@@ -54,8 +59,10 @@ Item{
                        anchors.topMargin: 10
                        clip: true
 
+
                        Column{
                            spacing: 5
+
                            Text {
                                id: nm
                                //anchors.centerIn: parent
@@ -65,8 +72,10 @@ Item{
                                font.pixelSize: 14
 
                            }
+                           clip: true
                            Text {
                                id: prN
+                               wrapMode: Text.WordWrap
                                //anchors.centerIn: parent
                                renderType: Text.NativeRendering
                                //text: name + "   " + facultet + "    " + sport

@@ -33,11 +33,13 @@ SOURCES += \
         main.cpp \
         mainwindow.cpp \
     myclient.cpp \
+    userdata.cpp
 
 HEADERS += \
         mainwindow.h \
     myclient.h \
-    parsejson.h
+    parsejson.h \
+    userdata.h
 
 FORMS += \
         mainwindow.ui
