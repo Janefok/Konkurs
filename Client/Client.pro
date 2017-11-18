@@ -36,7 +36,8 @@ SOURCES += \
 
 HEADERS += \
         mainwindow.h \
-    myclient.h
+    myclient.h \
+    parsejson.h
 
 FORMS += \
         mainwindow.ui
@@ -76,3 +77,6 @@ android-build/gradle/wrapper/gradle-wrapper.properties
 android-build/gradlew
 android-build/gradlew.bat
 ANDROID_PACKAGE_SOURCE_DIR = $$PWD/android-build
+
+
+

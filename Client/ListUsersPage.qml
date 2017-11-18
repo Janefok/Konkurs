@@ -85,6 +85,17 @@ Item{
                                    //text: name + "   " + facultet + "    " + sport
                                    text:preName
                                    font.pixelSize: 11
+                       spacing: 2
+                       anchors.leftMargin: 10
+                       Column{
+                           spacing: 5
+                           Text {
+                               id: nm
+                               //anchors.centerIn: parent
+                               renderType: Text.NativeRendering
+                               //text: name + "   " + facultet + "    " + sport
+                               text:name
+                               font.pixelSize: 14
 
                                }
                                Text {
