@@ -27,6 +27,7 @@ QString Handler::Setfunc(QString str){
            kindFaculty.select();
            tabledata.insert("Faculty", kindFaculty.getValue("Faculty").toString());
            tabledataList << tabledata;
+           qDebug() << tabledataList;
          }
     }
     //получаем json
