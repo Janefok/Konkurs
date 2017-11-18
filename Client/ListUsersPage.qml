@@ -62,7 +62,7 @@ Item{
                    Row{
                        anchors.fill:parent
 
-                       spacing: 20
+                       spacing: 2
                        anchors.leftMargin: 10
                        Column{
                            spacing: 5
