@@ -26,10 +26,13 @@ Client/Makefile.Debug
 Client/Makefile.Release
 =======
 Client/Client.pro.user
+
 Client/Client.pro.user.3f34610
+
 *.o
 =======
 Client/Client.pro.user
+
 Client/Client.pro.user.3f34610
 >>>>>>> Korshun
 <<<<<<< HEAD
@@ -39,12 +42,14 @@ Client/Client.pro.user.3f34610
 <<<<<<< HEAD
 Client/Client.pro.user
 Client/Client.pro.user
+
 =======
 build-Server_0-Desktop_Qt_5_8_0_MinGW_32bit-Debug/debug/base.o
 build-Server_0-Desktop_Qt_5_8_0_MinGW_32bit-Debug/debug/base.o
 build-Server_0-Desktop_Qt_5_8_0_MinGW_32bit-Debug/debug/main.o
 build-Server_0-Desktop_Qt_5_8_0_MinGW_32bit-Debug/debug/moc_myserver.o
 build-Server_0-Desktop_Qt_5_8_0_MinGW_32bit-Debug/debug/myserver.o
+
 =======
 >>>>>>> master
 >>>>>>> master
@@ -52,7 +57,9 @@ build-Client-Qt_5_8_0_mingw53_32-Debug/debug/moc_myclient.cpp
 build-Client-Qt_5_8_0_mingw53_32-Debug/debug/moc_myclient.cpp
 build-Client-Qt_5_8_0_mingw53_32-Debug/debug/moc_myclient.cpp
 build-Client-Qt_5_8_0_mingw53_32-Debug/Makefile.Release
+
 build-Client-Qt_5_8_0_mingw53_32-Debug/Makefile.Release
+
 build-Client-Qt_5_8_0_mingw53_32-Debug/debug/moc_myclient.cpp
 build-Client-Qt_5_8_0_mingw53_32-Debug/Makefile.Release
 <<<<<<< HEAD
@@ -60,6 +67,7 @@ build-Client-Qt_5_8_0_mingw53_32-Debug/Makefile.Release
 *.o
 Client/Client.pro.user
 Client/Client.pro.user
+
 >>>>>>> cd1103bd3d68bfe9e2b7acc410db40c883465b74
 <<<<<<< HEAD
 Client/Client.pro.user

@@ -1,8 +1,10 @@
 import QtQuick 2.7
 import QtQuick.Layouts 1.3
+import QtQuick.Controls 2.2
 import QtQuick.Controls.Material 2.1
 
 Item{
+    anchors.fill: parent
     ListModel {
        id: dataModel
        ListElement {
@@ -29,7 +31,6 @@ Item{
        id: columnList
        width: parent.width
 
-       CenterButton{ }
        //Toolbar
        Rectangle{
            width: parent.width
@@ -116,4 +117,5 @@ Item{
             }
         }
     }
+    CenterButton{}
 }

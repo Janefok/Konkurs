@@ -6,17 +6,13 @@ int main(int argc, char *argv[])
 {
     QApplication a(argc, argv);
 
-<<<<<<< HEAD
     MyClient     client("192.168.1.56", 2323);
-    //client.show();
 
     client.slotSendToServer("ХУЙ\ds\sd\sdba\brt\KOrsh");
-    client.slotSendToServer("reyw\ds\sd\sdba\brt\MeinHerzbrennt");
 
     //подключение qml
     QQmlApplicationEngine engine;
-    engine.load(QUrl(QLatin1String("MenuBar.qml")));
-=======
->>>>>>> master
+    engine.load(QUrl(QLatin1String("FrameMain.qml")));
+
     return a.exec();
 }
