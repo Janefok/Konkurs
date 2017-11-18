@@ -8,7 +8,7 @@
 #include <QTime>
 #include "handler.h"
 
-MyServer::MyServer(int nPort, Handler & res, QWidget* pwgt /*=0*/) : QWidget(pwgt)
+MyServer::MyServer(int nPort, Handler & res, QWidget* pwgt) : QWidget(pwgt)
                                                     , m_nNextBlockSize(0)
                                                     , response(&res)
 {
@@ -69,13 +69,12 @@ void MyServer::slotReadClient()
         QString str;
         in >> time >> str;
 
-        QString strMessage =
-            response->Setfunc(str);
-        m_ptxt->append(strMessage + time.toString());
+        QString responseStr = response->Setfunc(str);
+        m_ptxt->append(responseStr + time.toString());
 
         m_nNextBlockSize = 0;
 
-        sendToClient(pClientSocket, strMessage);
+        sendToClient(pClientSocket, responseStr);
     }
 }
 
