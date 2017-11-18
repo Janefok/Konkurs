@@ -64,7 +64,7 @@ TabBar{
             Image {
                 //anchors.fill: parent/4
                 anchors.centerIn: parent
-                source: "./icons/ic_assignment_white_24dp.png"
+                source: "./icons/ic_face_white_24dp.png"
             }
         }
     }
@@ -92,7 +92,7 @@ TabBar{
             Image {
                 //anchors.fill: parent/4
                 anchors.centerIn: parent
-                source: "./icons/ic_equalizer_white_24dp.png"
+                source: "./icons/ic_assignment_white_24dp.png"
             }
         }
     }

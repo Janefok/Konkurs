@@ -9,17 +9,42 @@ Item{
        id: dataModel
        ListElement {
            color: "white"
-           //text: "first"
            name: "Alexeev"
-           preName: "Dmitrij"
-           lastName:"Seergeevich"
            facultet: "IKT"
            sport: "Tennis"
        }
        ListElement {
            name: "Fokina"
-           preName: "Evgenia"
-           lastName:"Alexeevna"
+           facultet: "IKT"
+           sport: "Tennis"
+           color: "white"
+       }
+       ListElement {
+           name: "Fokina"
+           facultet: "IKT"
+           sport: "Tennis"
+           color: "white"
+       }
+       ListElement {
+           name: "Fokina"
+           facultet: "IKT"
+           sport: "Tennis"
+           color: "white"
+       }
+       ListElement {
+           name: "Fokina"
+           facultet: "IKT"
+           sport: "Tennis"
+           color: "white"
+       }
+       ListElement {
+           name: "Fokina"
+           facultet: "IKT"
+           sport: "Tennis"
+           color: "white"
+       }
+       ListElement {
+           name: "Fokina"
            facultet: "IKT"
            sport: "Tennis"
            color: "white"
@@ -42,87 +67,69 @@ Item{
                source: "SearchData.qml"
            }
        }
-       //List
+
+       //List - как я поняла это область где рендерится весь список
         Rectangle{
-           color: "#4d4d4d"
+           color: "#e6e6e6"
            width: parent.width
            height: 400
            ListView {
                id: view
                width: parent.width
                anchors.fill: parent
-               spacing: 10
+               spacing: 2
                model: dataModel
 
                delegate: Button{
                    id:buttonList
                    width: view.width
-                   height: 80
+                   height: 40
+
                    background: Rectangle {
-                       color: 'white'
-                       radius: 10
-                       border.color: "#4d4d4d"
+                   color: 'white'
+                   border.color: "#cccccc"
+                   anchors.fill:parent
+
                        Row{
-                           anchors.fill:parent
-
                            spacing: 20
-                           anchors.leftMargin: 10
-                           Column{
-                               spacing: 5
-                               Text {
-                                   id: nm
-                                   //anchors.centerIn: parent
-                                   renderType: Text.NativeRendering
-                                   //text: name + "   " + facultet + "    " + sport
-                                   text:name
-                                   font.pixelSize: 14
+                           // Отступ сверху, 10 пикселей
+                           anchors.fill: parent;
+                           anchors.leftMargin: 5;
+                           anchors.topMargin: 2;
 
-                               }
-                               Text {
-                                   id: prN
-                                   //anchors.centerIn: parent
-                                   renderType: Text.NativeRendering
-                                   //text: name + "   " + facultet + "    " + sport
-                                   text:preName
-                                   font.pixelSize: 11
-                       spacing: 2
-                       anchors.leftMargin: 10
-                       Column{
-                           spacing: 5
+                           Image {
+                               width: 35
+                               height: 35
+                               source: "./icons/icons8-Пользователь-мужчина в кружке-48.png"
+                           }
+
                            Text {
                                id: nm
                                //anchors.centerIn: parent
                                renderType: Text.NativeRendering
                                //text: name + "   " + facultet + "    " + sport
+                               anchors.verticalCenter: parent.verticalCenter
+                               width: parent/3
                                text:name
                                font.pixelSize: 14
 
-                               }
-                               Text {
-                                   id: lN
-                                   //anchors.centerIn: parent
-                                   renderType: Text.NativeRendering
-                                   //text: name + "   " + facultet + "    " + sport
-                                   text:lastName
-                                   font.pixelSize: 11
-
-                               }
                            }
+
                            Text {
-                               id: fac
-                               //anchors.left: nm.right
-
+                               id: fact
+                               anchors.verticalCenter: parent.verticalCenter
                                font.pixelSize: 14
-
+                               width: parent/3
                                text: facultet
                            }
+
                            Text {
                                id: st
-                               //width: :
-                               //anchors.left: fac.right
+                               // Выравнивание элемента по центру
+                               anchors.verticalCenter: parent.verticalCenter
                                text: sport
                                font.pixelSize: 14
-
+                               width: parent/3
                            }
 
                         }//end of Row
@@ -135,10 +142,10 @@ Item{
 //                   }
                     }
                    onClicked: stackUsersPage.push(loader.source="UserPage.qml")
-                }//end of delegate:
-            }//end of ListView
-        }//end of Rectangle
-    }//end of Column (with ToolBar & ListUsersPage)
+                }   //end of delegate:
+            }   //end of ListView
+        }   //end of Rectangle
+    }   //end of Column (with ToolBar & ListUsersPage)
     CenterButton{}
     StackView{
         id:stackUsersPage

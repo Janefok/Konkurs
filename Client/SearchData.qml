@@ -17,11 +17,8 @@ ToolBar{
         background: Rectangle {
             implicitWidth: 100
             implicitHeight: 40
-            border.color: "#4d4d4d"
-            gradient: Gradient {
-                GradientStop { position: 0 ; color: "#fff" }
-                GradientStop { position: 1 ; color: "#4d4d4d" }
-            }
+            color: "#cccccc"
+            radius: 10
         }
     }
 
