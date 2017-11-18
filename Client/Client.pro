@@ -45,13 +45,6 @@ FORMS += \
 
 DISTFILES += \
     PersonMenu.qml \
-<<<<<<< HEAD
-    ListViewMenu.qml \
-    mainWindow.qml \
-    SearchData.qml \
-    TabButtons.qml
-
-=======
     SearchData.qml \
     TabButtons.qml \
     ListUsersPage.qml \
@@ -59,7 +52,7 @@ DISTFILES += \
     CenterButton.qml \
     FeedPage.qml \
     StatisticsPage.qml
->>>>>>> 382ad1855b6c869e9492bb248a6722ea5a0eec12
+
 
 QML_IMPORT_PATH = "D:\Qt\5.8\mingw53_32\qml\QtQuick\Controls.2\Material"
 QML_IMPORT_PATH = "D:\Konkurs\Client"

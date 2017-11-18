@@ -6,18 +6,17 @@ Item{
     ListModel {
        id: dataModel
        ListElement {
-           color: "white"
-           //text: "first"
+           //color: "white"
            name: "Alexeev"
-           preName: "Dmitrij"
-           lastName:"Seergeevich"
+           //preName: "Dmitrij"
+           //lastName:"Seergeevich"
            facultet: "IKT"
            sport: "Tennis"
        }
        ListElement {
            name: "Fokina"
-           preName: "Evgenia"
-           lastName:"Alexeevna"
+           //preName: "Evgenia"
+           //lastName:"Alexeevna"
            facultet: "IKT"
            sport: "Tennis"
            color: "white"
@@ -28,20 +27,22 @@ Item{
     Column{
        id: columnList
        width: parent.width
-       //Toolbar
+       //Toolbar = верхняя панелька с заголовоком страницы
        Rectangle{
            width: parent.width
            height: 40
-           Loader{
-               id:search
-               width: columnList.width
-               anchors.fill: parent
-               source: "SearchData.qml"
-           }
-       }
-       //List
-       Rectangle{
            color: "#4d4d4d"
+           Text {
+               text: "Новости"
+               anchors.centerIn: parent
+               color: "white"
+               font.pixelSize : 18
+             }
+       }
+
+       //List - как я поняла это область где рендерится весь список
+       Rectangle{
+           color: "#e6e6e6"
            width: parent.width
            height: 400
            ListView {
@@ -56,10 +57,8 @@ Item{
                    height: 80
                    color: 'white'
                    radius: 10
-                   border.color: "#4d4d4d"
                    Row{
                        anchors.fill:parent
-
                        spacing: 20
                        anchors.leftMargin: 10
                        Column{
