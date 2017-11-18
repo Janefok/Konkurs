@@ -94,7 +94,15 @@ Client/PersonMenu.qmlc
 Client/SearchData.qmlc
 *.qml
 >>>>>>> cd1103bd3d68bfe9e2b7acc410db40c883465b74
+<<<<<<< HEAD
+Client/Client.pro.user
+=======
 >>>>>>> master
 *.qmlc
 *.exe
 *.o
+>>>>>>> Korshun
+*.exe
+build-Client-Desktop_Qt_5_8_0_MinGW_32bit-Debug/debug/Client.exe
+Client/Client.pro.user
+*.qmlc
