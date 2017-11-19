@@ -4,6 +4,7 @@ import QtQuick.Controls 2.1
 import QtQuick.Controls.Material 2.1
 
 Item{
+    anchors.fill: parent
     ListModel {
        id: dataModel
        ListElement {
@@ -103,7 +104,7 @@ Item{
                                    renderType: Text.NativeRendering
                                    text: caption
                                    font.pixelSize: 14
-
+                                   color: "#4d1517"
                                }
                            }
 
@@ -114,7 +115,7 @@ Item{
                                text: info
                                wrapMode: Text.WordWrap
                                font.pixelSize: 12
-
+                               color: "#333333"
                            }
                        }
                 }
@@ -133,7 +134,6 @@ Item{
             id: plus
             font.pixelSize: 40
             anchors.centerIn: parent
-            color: "white"
             text: "+"
         }
         //radius: 50

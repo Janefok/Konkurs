@@ -111,6 +111,7 @@ Item{
                                anchors.verticalCenter: parent.verticalCenter
                                width: parent/3
                                text:name
+                               color: "#333333"
                                font.pixelSize: 14
 
                            }
@@ -121,6 +122,7 @@ Item{
                                font.pixelSize: 14
                                width: parent/3
                                text: facultet
+                               color: "#333333"
                            }
 
                            Text {
@@ -130,6 +132,7 @@ Item{
                                text: sport
                                font.pixelSize: 14
                                width: parent/3
+                               color: "#333333"
                            }
 
                         }//end of Row
@@ -160,7 +163,6 @@ Item{
             id: plus
             font.pixelSize: 40
             anchors.centerIn: parent
-            color: "white"
             text: "+"
         }
         radius: 30
@@ -183,6 +185,7 @@ Item{
                              event.accepted = true;
                          }
     }
+
     Loader{
         id:loader
         anchors.fill: parent
