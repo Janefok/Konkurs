@@ -1,9 +1,11 @@
 #include "myserver.h"
 #include <QApplication>
 #include "handler.h"
+#include <locale>
 
 int main(int argc, char *argv[])
 {
+    setlocale( LC_ALL,"Russian" );
     QApplication a(argc, argv);
 
     Handler response;

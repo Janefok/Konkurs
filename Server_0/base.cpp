@@ -41,8 +41,8 @@ bool Table::next(){
 void Table::select(){
     rec = qTable->record();
     //qTable->setEditStrategy(QSqlTableModel::OnManualSubmit);
-    qTable->select();
     qTable->record().clear();
+    qTable->select();
 }
 
 void Table::setValue(QString lRowName, QVariant lValue){

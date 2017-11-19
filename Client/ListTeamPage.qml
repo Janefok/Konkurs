@@ -79,10 +79,18 @@ Item{
 
                            }
 
+                           Text {
+                               //width: :
+                               //anchors.left: fac.right
+                               text: " "
+                               font.pixelSize: 16
+
+                           }
+
                         Text {
                             id: st
                             //width: :
-                            //anchors.left: fac.right
+                            //anchors.rightMargin: view.right
                             text: sport
                             font.pixelSize: 12
 
@@ -95,7 +103,6 @@ Item{
                            Text {
                                id: nm
                                //anchors.left: nm.right
-
                                font.pixelSize: 12
                                text: name
                            }

@@ -71,6 +71,7 @@ void MyServer::slotReadClient()
 
         QString strMessage =
             response->Setfunc(str);
+        qDebug() << strMessage;
         m_ptxt->append(strMessage + time.toString());
 
         m_nNextBlockSize = 0;
