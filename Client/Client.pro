@@ -80,5 +80,8 @@ android-build/gradlew
 android-build/gradlew.bat
 ANDROID_PACKAGE_SOURCE_DIR = $$PWD/android-build
 
+RESOURCES += \
+    res.qrc
+
 
 
