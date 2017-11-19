@@ -22,3 +22,10 @@ build*
 *.stash
 *.pro
 *.user
+*.exe
+*.o
+Client/Makefile
+*.Debug
+*.Release
+*.qmlc
+*.autosave
