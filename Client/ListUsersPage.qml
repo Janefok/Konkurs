@@ -52,6 +52,7 @@ Item{
 
     }
 
+
     Column{
        id: columnList
        width: parent.width
@@ -113,6 +114,42 @@ Item{
                                text:name
                                color: "#333333"
                                font.pixelSize: 14
+                       color: 'white'
+                       radius: 10
+                       border.color: "#4d4d4d"
+                       Row{
+                           anchors.fill:parent
+                           spacing: 20
+                           anchors.leftMargin: 10
+                           Column{
+                               spacing: 5
+                               Text {
+                                   id: nm
+                                   //anchors.centerIn: parent
+                                   renderType: Text.NativeRendering
+                                   //text: name + "   " + facultet + "    " + sport
+                                   text:name
+                                   font.pixelSize: 14
+
+                               }
+                               Text {
+                                   id: prN
+                                   //anchors.centerIn: parent
+                                   renderType: Text.NativeRendering
+                                   //text: name + "   " + facultet + "    " + sport
+                                   text:preName
+                                   font.pixelSize: 11
+//                       spacing: 2
+//                       anchors.leftMargin: 10
+//                       Column{
+//                           spacing: 5
+//                           Text {
+//                               id: nm
+//                               //anchors.centerIn: parent
+//                               renderType: Text.NativeRendering
+//                               //text: name + "   " + facultet + "    " + sport
+//                               text:name
+//                               font.pixelSize: 14
 
                            }
 

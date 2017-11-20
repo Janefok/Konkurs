@@ -14,3 +14,10 @@ build*
 *.user
 Client/Client.pro.user
 Server_0/Server_0.pro.user
+*.exe
+*.o
+Client/Makefile
+*.Debug
+*.Release
+*.qmlc
+*.autosave
