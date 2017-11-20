@@ -18,3 +18,5 @@ extern QList<QMap<QString, QVariant>> feedList;
 QList<QMap<QString, QVariant>> decomposeMyJson(QString jsonStr1, const char* list);
 
 QList<QString> getPostFromFeed(int index);
+
+QList<QString> getUserFromList(int index);
