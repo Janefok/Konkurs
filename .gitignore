@@ -22,3 +22,4 @@ Client/Makefile
 *.qmlc
 *.autosave
 Client/Client.pro
+*.user
