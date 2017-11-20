@@ -32,14 +32,15 @@ DEFINES += QT_DEPRECATED_WARNINGS
 SOURCES += \
         main.cpp \
         mainwindow.cpp \
-    myclient.cpp
+    myclient.cpp \
+    model.cpp
 
 HEADERS += \
         mainwindow.h \
     myclient.h \
-    parsejson.h
-    userdata.h
-
+    parsejson.h \
+    userdata.h \
+    model.h
 FORMS += \
         mainwindow.ui
 
