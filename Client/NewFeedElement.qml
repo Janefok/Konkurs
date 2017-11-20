@@ -33,15 +33,14 @@ import QtQuick.Controls.Styles 1.4
             spacing: 10
 
             Column{
-                anchors.fill: parent
-                spacing: 2
+                spacing: 10
 
                 Row {
                     Image {
                         anchors.bottomMargin: view.height/2
                         anchors.rightMargin: view.width/2 - 10
-                        width: 50
-                        height: 50
+                        width: 40
+                        height: 40
                         source: "icons/icons8-О нас-48.png"
                     }
 
@@ -57,13 +56,13 @@ import QtQuick.Controls.Styles 1.4
                     Rectangle {
                         id: rectangle
                         width: 250
-                        height: 25
+                        height: text_caption.contentHeight + 40
                         color: "white"
                         visible: true
 
                         Row {
                             width: 250
-                            height: 25
+                            height: text_caption.contentHeight + 40
 
                             Image {
                                 anchors.bottomMargin: view.height/2
@@ -75,22 +74,21 @@ import QtQuick.Controls.Styles 1.4
                             Text {
                                 text: " Заголовок: "
                                 color: "#666666"
-                                anchors.verticalCenter: parent.verticalCenter
                                 width: parent/3
-                                //verticalAlignment: Text.AlignVCenter
-                                //horizontalAlignment: Text.AlignHCenter
                                 font.pixelSize: 12
                             }
 
-                            Text {
-                                id: text_sername
+                            TextInput {
+                                id: text_caption
                                 text: "Наша победа"
                                 color: "#333333"
                                 anchors.verticalCenter: parent.verticalCenter
-                                width: parent
+                                width: parent.width - 10
                                 verticalAlignment: Text.AlignVCenter
                                 horizontalAlignment: Text.AlignRight
+                                renderType: Text.NativeRendering
                                 font.pixelSize: 14
+                                wrapMode: Text.WordWrap
                             }
                          }
                     }
@@ -100,13 +98,13 @@ import QtQuick.Controls.Styles 1.4
                     Rectangle {
                         id: rectangle2
                         width: 250
-                        height: 25
+                        height: text_info.contentHeight + 40
                         color: "white"
                         visible: true
 
                         Row {
                             width: 250
-                            height: 80
+                            height: text_info.contentHeight + 40
 
                             Image {
                                 anchors.bottomMargin: view.height/2
@@ -118,29 +116,29 @@ import QtQuick.Controls.Styles 1.4
                             Text {
                                 text: " Описание: "
                                 color: "#666666"
-                                anchors.verticalCenter: parent.verticalCenter
                                 width: parent/3
                                 font.pixelSize: 12
                             }
 
-                            Text {
-                                id: text_name
+                            TextInput {
+                                id: text_info
                                 text: "Евгения"
                                 horizontalAlignment: Text.AlignRight
                                 color: "#333333"
                                 anchors.verticalCenter: parent.verticalCenter
                                 width: parent
                                 font.pixelSize: 14
+                                renderType: Text.NativeRendering
+                                wrapMode: Text.WordWrap
                             }
                         }
                     }
                 }
 
                 Row {
-
-                    Button {
-                        text: "Создать запись"
-                    }
+                   Button {
+                       text: "Добавить запись"
+                   }
                 }
             }
 

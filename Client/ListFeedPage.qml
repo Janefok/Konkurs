@@ -136,6 +136,8 @@ Item{
             anchors.centerIn: parent
             text: "+"
         }
+
+        onClicked: stackFeedPage.push(loader_feed.source="NewFeedElement.qml")
         //radius: 50
         //background: Rectangle{
         //    radius: 80
@@ -144,5 +146,21 @@ Item{
 //        style:ButtonStyle{
 //            color:"lightblue"
 //        }
+    }
+
+    StackView{
+        id:stackFeedPage
+        initialItem: buttonList
+        anchors.fill: parent
+        focus: true
+        Keys.onReleased: if (event.key === Qt.Key_Back && stackView.depth > 1) {
+                             stackView.pop(loader_feed.source = "NewFeedElement.qml");
+                             event.accepted = true;
+                         }
+    }
+
+    Loader{
+        id:loader_feed
+        anchors.fill: parent
     }
 }
