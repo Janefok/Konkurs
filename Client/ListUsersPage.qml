@@ -60,11 +60,17 @@ Item{
        Rectangle{
            width: parent.width
            height: 40
-           Loader{
-               id:search
+//           Loader{
+//               id:search
+//               width: columnList.width
+//               anchors.fill: parent
+//               source: "SearchData.qml"
+//           }
+           SearchData{
+               id:searchName
                width: columnList.width
                anchors.fill: parent
-               source: "SearchData.qml"
+
            }
        }
 
@@ -78,6 +84,17 @@ Item{
                width: parent.width
                anchors.fill: parent
                spacing: 2
+               y: searchName.visible ? searchName : 0
+               Behavior on y{
+                   NumberAnimation{duration: 200}
+               }
+//               function applyFilter(user_Name){
+//                   var userList = mod.getName(user_Name);
+//                   model.clear();
+//                   for(var i = 0; i < userList.lenght; ++i){
+//                       model.append()
+//                   }
+//                }
                model: dataModel
 
                delegate: Button{
@@ -204,3 +221,4 @@ Item{
     }
 
 }
+

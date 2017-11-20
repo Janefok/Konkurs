@@ -74,6 +74,7 @@ ToolBar{
         }
 
     }
+
 //    RowLayout {
 //           id: backBar
 //           width: parent.width
