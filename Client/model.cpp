@@ -1,4 +1,11 @@
 #include "model.h"
+#include "parsejson.h"
+
+
+extern QList<QMap<QString, QVariant>> userList;
+extern QList<QMap<QString, QVariant>> teamList;
+extern QList<QMap<QString, QVariant>> feedList;
+
 
 Animal::Animal(const QString &type, const QString &size)
     : m_type(type), m_size(size)
@@ -18,21 +25,12 @@ QString Animal::size() const
 AnimalModel::AnimalModel(QObject *parent)
     : QAbstractListModel(parent)
 {
-
-//    AnimalModel *model;
-//    model.addAnimal(Animal("Wolf", "Medium"));
-//    model.addAnimal(Animal("Polar bear", "Large"));
-//    model.addAnimal(Animal("Quoll", "Small"));
-    addAnimal(Animal("Quoll", "Small"));
-    addAnimal(Animal("Quoll", "Small"));
-    addAnimal(Animal("Quoll", "Small"));
-
-    addAnimal(Animal("Quoll", "Small"));
-
-    addAnimal(Animal("Quoll", "Small"));
-    addAnimal(Animal("Quoll", "Small"));
-    addAnimal(Animal("Quoll", "Small"));
-
+    QStringList l = getPostFromFeed(0);
+    for (int i = 0; i < feedList.size(); i++){
+        QStringList l = getPostFromFeed(i);
+        Animal a (l[0], l[1]);
+        addAnimal(a);
+    }
 }
 
 void AnimalModel::addAnimal(const Animal &animal)
