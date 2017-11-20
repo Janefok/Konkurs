@@ -8,6 +8,10 @@
 #include <QQmlApplicationEngine>
 #include "parseJson.h"
 
+QList<QMap<QString, QVariant>> userList;
+QList<QMap<QString, QVariant>> teamList;
+QList<QMap<QString, QVariant>> feedList;
+
 MyClient::MyClient(const QString& strHost, int nPort, QWidget* pwgt) : QWidget(pwgt), m_nNextBlockSize(0)
 {
     //подключение qml
@@ -62,11 +66,17 @@ void MyClient::slotReadyRead()
         in >> time >> str;
 //         qDebug() << (time.toString() + " " + str);
 
-        //когда чота пришло - парсим его и пишем в специальный объект
-         QList<QMap<QString, QVariant>> jsonListMap;
          if (str != "Server Response: Connected!" && !str.isEmpty()){
-            jsonListMap = decomposeMyJson(str);
-            qDebug() << "\n" << jsonListMap;
+             if (str.contains("ListUsers")){
+                userList = decomposeMyJson(str, "ListUsers");
+             }
+             if (str.contains("ListTeam")){
+                 teamList = decomposeMyJson(str, "ListTeamUsers");
+             }
+             if (str.contains("ListFeed")){
+                 feedList = decomposeMyJson(str, "ListFeed");
+             }
+
          }
         m_nNextBlockSize = 0;
     }

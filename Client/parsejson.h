@@ -11,9 +11,13 @@
 
 
 //этой функции можно скормить QString с json`ом, она вернет List(Map()) - распаршенную в объект строку
-QList<QMap<QString, QVariant>> decomposeMyJson(QString jsonStr1){
+//первая строка - jspn response, вторая строка - тип списка. говнокод
+QList<QMap<QString, QVariant>> decomposeMyJson(QString jsonStr1, const char* list){
     QJsonDocument jsonDoc = QJsonDocument::fromJson(jsonStr1.toUtf8());
-    QJsonArray jsonArr = jsonDoc.array();
+    QJsonObject jsonObj = jsonDoc.object();
+    //list.toStdString()
+    QJsonArray jsonArr = jsonObj[list].toArray();
+    qDebug() << jsonArr;
     QList< QMap<QString, QVariant> > jsonListMap;
     QMap<QString, QVariant> jsonMap;
     foreach (const QJsonValue & value, jsonArr)    {
@@ -22,6 +26,8 @@ QList<QMap<QString, QVariant>> decomposeMyJson(QString jsonStr1){
     }
 //    qDebug() << "listmap\n" << jsonListMap << "\nend listmap\n";
 //    qDebug() << "первый элемент списка" << jsonListMap[0] << "\n";
+
+//    userList = jsonListMap;
     return jsonListMap;
 
 //    for
