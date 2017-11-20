@@ -114,9 +114,11 @@ Item{
                                text:name
                                color: "#333333"
                                font.pixelSize: 14
-                       color: 'white'
-                       radius: 10
-                       border.color: "#4d4d4d"
+                           }
+                       }
+//                       color: 'white'
+//                       radius: 10
+//                       border.color: "#4d4d4d"
                        Row{
                            anchors.fill:parent
                            spacing: 20
@@ -172,15 +174,13 @@ Item{
                                color: "#333333"
                            }
 
+                           }
                         }//end of Row
 //                   MouseArea{
 //                       anchors.fill: parent
 //                       onClicked: {
-//                           parent.color = "red"
-//                           stackPersonView.push(Qt.resolvedUrl("./icons/ic_equalizer_white_24dp.png"))
-//                       }
-//                   }
-                    }
+
+                   }
                    onClicked: stackUsersPage.push(loader.source="UserPage.qml")
                 }   //end of delegate:
             }   //end of ListView
