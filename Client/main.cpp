@@ -1,6 +1,6 @@
 #include "model.h"
 
-#include <QGuiApplication>
+#include <QApplication>
 #include <QQmlApplicationEngine>
 
 #include <qqmlengine.h>
@@ -9,26 +9,23 @@
 #include <QtQuick/qquickitem.h>
 #include <QtQuick/qquickview.h>
 
-int main(int argc, char ** argv)
+#include "myclient.h"
+
+int main(int argc, char *argv[])
 {
-    QGuiApplication app(argc, argv);
+    QApplication app(argc, argv);
 
-    AnimalModel model;
-    model.addAnimal(Animal("Wolf", "Medium"));
-    model.addAnimal(Animal("Polar bear", "Large"));
-    model.addAnimal(Animal("Quoll", "Small"));
+    MyClient client ("localhost", 2323);
 
-//    QQuickView userdata;
-//    userdata.setResizeMode(QQuickView::SizeRootObjectToView);
-//    QQmlContext *ctxt = userdata.rootContext();
-//    ctxt->setContextProperty("myModel", &model);
-//    userdata.setSource(QUrl("qrc:view.qml"));
+    client.slotSendToServer("LOAD/ListUsers");
+    client.slotSendToServer("LOAD/ListTeamUsers");
+    client.slotSendToServer("LOAD/ListFeed");
 
     QQmlApplicationEngine engine;
-    qmlRegisterType<AnimalModel>("anima", 1, 0, "AnimaModel");
-    //qmlRegisterType<model>("aff",1,0,"AnModel");
+
+    qmlRegisterType<AnimalModel>("anima", 1, 0, "ListModel");
+
     engine.load(QUrl(QLatin1String("FrameMain.qml")));
 
-//    userdata.show();
     return app.exec();
 }

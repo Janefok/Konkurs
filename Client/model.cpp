@@ -1,6 +1,5 @@
 #include "model.h"
 
-
 Animal::Animal(const QString &type, const QString &size)
     : m_type(type), m_size(size)
 {
@@ -19,6 +18,7 @@ QString Animal::size() const
 AnimalModel::AnimalModel(QObject *parent)
     : QAbstractListModel(parent)
 {
+
 //    AnimalModel *model;
 //    model.addAnimal(Animal("Wolf", "Medium"));
 //    model.addAnimal(Animal("Polar bear", "Large"));
@@ -86,5 +86,7 @@ QHash<int, QByteArray> AnimalModel::roleNames() const {
     QHash<int, QByteArray> roles;
     roles[TypeRole] = "info";
     roles[SizeRole] = "caption";
+    roles[TypeRole] = "caption";
+    roles[SizeRole] = "info";
     return roles;
 }

@@ -13,7 +13,7 @@ TabBar{
             switch (currentIndex)
             {
                 case 0:
-                    loader.source = "FeedPage.qml"
+                    loader.source = "ListFeedPage.qml"
                     //search.source = "SearchData.qml"
                     //visible : FeedPage{}
                     textOnToolbar.text = "Новости"
@@ -24,7 +24,7 @@ TabBar{
                     textOnToolbar.text = "Список студентов"
                     break;
                 case 2:
-                    loader.source = "StatisticsPage.qml"
+                    loader.source = "ListTeamPage.qml"
                     textOnToolbar.text = "Команды университета"
                     break;
                 case 3:
@@ -64,7 +64,7 @@ TabBar{
             Image {
                 //anchors.fill: parent/4
                 anchors.centerIn: parent
-                source: "./icons/ic_assignment_white_24dp.png"
+                source: "./icons/ic_face_white_24dp.png"
             }
         }
     }
@@ -92,7 +92,7 @@ TabBar{
             Image {
                 //anchors.fill: parent/4
                 anchors.centerIn: parent
-                source: "./icons/ic_equalizer_white_24dp.png"
+                source: "./icons/ic_assignment_white_24dp.png"
             }
         }
     }

@@ -6,7 +6,7 @@
 
 class QLineEdit;
 
-class MyClient : public QWidget {
+class MyClient: public QWidget {
 Q_OBJECT
 private:
     QTcpSocket* m_pTcpSocket;

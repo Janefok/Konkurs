@@ -66,7 +66,7 @@ void MyClient::slotReadyRead()
          QList<QMap<QString, QVariant>> jsonListMap;
          if (str != "Server Response: Connected!" && !str.isEmpty()){
             jsonListMap = decomposeMyJson(str);
-            qDebug() << jsonListMap;
+            qDebug() << "\n" << jsonListMap;
          }
         m_nNextBlockSize = 0;
     }

@@ -1,14 +1,7 @@
 *.Debug 
 build-* 
-*user.* 
-*.exe 
 *android-build*
-*.o 
 build* 
-*.qmlc 
-*.stash 
-*.pro 
-*.user
 *.obj
 *.stash
 Client/android-libClient.so-deployment-settings.json
@@ -22,6 +15,8 @@ build*
 *.stash
 *.pro
 *.user
+Client/Client.pro.user
+Server_0/Server_0.pro.user
 *.exe
 *.o
 Client/Makefile
@@ -29,3 +24,4 @@ Client/Makefile
 *.Release
 *.qmlc
 *.autosave
+Client/Client.pro

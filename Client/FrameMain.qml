@@ -18,7 +18,7 @@ ApplicationWindow {
         id: loader
         anchors.fill: parent
         width: parent.width
-        source: "FeedPage.qml"
+        source: "ListFeedPage.qml"
     }
 
     //Toolbar = верхняя панелька с заголовоком страницы, по умолчанию загружается старница "Новости" (текст меняется по нажатию на табы)

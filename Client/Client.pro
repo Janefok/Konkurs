@@ -32,10 +32,8 @@ DEFINES += QT_DEPRECATED_WARNINGS
 SOURCES += \
         main.cpp \
         mainwindow.cpp \
-    myclient.cpp \
-    userdata.cpp \
-    main.cpp \
-    model.cpp
+        myclient.cpp \
+        model.cpp
 
 HEADERS += \
         mainwindow.h \
@@ -50,38 +48,20 @@ FORMS += \
 
 
 DISTFILES += \
-    MenuBar.qml \
     PersonMenu.qml \
-    ListViewMenu.qml \
-    mainWindow.qml \
     SearchData.qml \
     TabButtons.qml \
-    FeedPage.qml \
     FrameMain.qml \
     ListUsersPage.qml \
     StatisticsPage.qml \
-    CenterButton.qml \
-    UserPage.qml
-
 QML_IMPORT_PATH = "С:\Qt\5.8\mingw53_32\qml\QtQuick\Controls.2\Material"
 QML_IMPORT_PATH = "C:\Users\darkk\Documents\GitHub\Konkurs\Client"
-QML_IMPORT_PATH = "C:\Qt\5.9.2\android_armv7\qml\QtQuick\Controls.2\Material"
-QML_IMPORT_PATH = "C:\Qt\5.9.2\android_armv7\qml\QtQuick\Extras"
-QML_IMPORT_PATH = "C:\Qt\5.9.2\android_armv7\qml\QtQuick\Controls"
+    UserPage.qml \
+    ListFeedPage.qml \
+    ListTeamPage.qml \
+    NewFeedElement.qml \
+    NewUser.qml
 
-QML_IMPORT_PATH = "C:\Qt\5.9.2\android_x86\qml\QtQuick\Extras"
-QML_IMPORT_PATH = "C:\Qt\5.9.2\android_x86\qml\QtQuick\Controls"
-QML_IMPORT_PATH = "C:\Qt\5.9.2\android_x86\qml\QtQuick\Controls.2\Material"
-
-DISTFILES +=
-android-build/gradle/wrapper/gradle-wrapper.jar
-android-build/AndroidManifest.xml
-android-build/res/values/libs.xml
-android-build/build.gradle
-android-build/gradle/wrapper/gradle-wrapper.properties
-android-build/gradlew
-android-build/gradlew.bat
-ANDROID_PACKAGE_SOURCE_DIR = $$PWD/android-build
 
 RESOURCES += \
     res.qrc
