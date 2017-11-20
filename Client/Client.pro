@@ -33,11 +33,13 @@ SOURCES += \
         main.cpp \
         mainwindow.cpp \
     myclient.cpp
+    model.cpp
 
 HEADERS += \
         mainwindow.h \
     myclient.h \
     parsejson.h
+    model.h
     userdata.h
 
 FORMS += \
@@ -58,6 +60,8 @@ DISTFILES += \
     UserPage.qml \
     ListFeedPage.qml \
     ListTeamPage.qml
+    NewFeedElement.qml \
+    NewUser.qml
 
 QML_IMPORT_PATH = "С:\Qt\5.8\mingw53_32\qml\QtQuick\Controls.2\Material"
 QML_IMPORT_PATH = "C:\Users\darkk\Documents\GitHub\Konkurs\Client"

@@ -27,12 +27,6 @@ AnimalModel::AnimalModel(QObject *parent)
     addAnimal(Animal("Quoll", "Small"));
     addAnimal(Animal("Quoll", "Small"));
 
-    addAnimal(Animal("Quoll", "Small"));
-
-    addAnimal(Animal("Quoll", "Small"));
-    addAnimal(Animal("Quoll", "Small"));
-    addAnimal(Animal("Quoll", "Small"));
-
 }
 
 void AnimalModel::addAnimal(const Animal &animal)
@@ -61,7 +55,7 @@ QVariant AnimalModel::data(const QModelIndex & index, int role) const {
 
 QHash<int, QByteArray> AnimalModel::roleNames() const {
     QHash<int, QByteArray> roles;
-    roles[TypeRole] = "type";
-    roles[SizeRole] = "size";
+    roles[TypeRole] = "caption";
+    roles[SizeRole] = "info";
     return roles;
 }

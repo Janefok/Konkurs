@@ -52,7 +52,6 @@ Item{
 
     }
 
-
     Column{
        id: columnList
        width: parent.width
@@ -114,44 +113,6 @@ Item{
                                text:name
                                color: "#333333"
                                font.pixelSize: 14
-                           }
-                       }
-//                       color: 'white'
-//                       radius: 10
-//                       border.color: "#4d4d4d"
-                       Row{
-                           anchors.fill:parent
-                           spacing: 20
-                           anchors.leftMargin: 10
-                           Column{
-                               spacing: 5
-                               Text {
-                                   id: nm
-                                   //anchors.centerIn: parent
-                                   renderType: Text.NativeRendering
-                                   //text: name + "   " + facultet + "    " + sport
-                                   text:name
-                                   font.pixelSize: 14
-
-                               }
-                               Text {
-                                   id: prN
-                                   //anchors.centerIn: parent
-                                   renderType: Text.NativeRendering
-                                   //text: name + "   " + facultet + "    " + sport
-                                   text:preName
-                                   font.pixelSize: 11
-//                       spacing: 2
-//                       anchors.leftMargin: 10
-//                       Column{
-//                           spacing: 5
-//                           Text {
-//                               id: nm
-//                               //anchors.centerIn: parent
-//                               renderType: Text.NativeRendering
-//                               //text: name + "   " + facultet + "    " + sport
-//                               text:name
-//                               font.pixelSize: 14
 
                            }
 
@@ -174,13 +135,15 @@ Item{
                                color: "#333333"
                            }
 
-                           }
                         }//end of Row
 //                   MouseArea{
 //                       anchors.fill: parent
 //                       onClicked: {
-
-                   }
+//                           parent.color = "red"
+//                           stackPersonView.push(Qt.resolvedUrl("./icons/ic_equalizer_white_24dp.png"))
+//                       }
+//                   }
+                    }
                    onClicked: stackUsersPage.push(loader.source="UserPage.qml")
                 }   //end of delegate:
             }   //end of ListView
@@ -195,7 +158,9 @@ Item{
         anchors.bottomMargin: 10
         anchors.rightMargin: view.width/2 - 10
         anchors.horizontalCenter: parent.footer
-        //anchors.centerIn: parent.bottom
+
+        onClicked: stackNewUsersPage.push(loader_new_user.source="NewUser.qml")
+
         Text {
             id: plus
             font.pixelSize: 40
@@ -203,13 +168,7 @@ Item{
             text: "+"
         }
         radius: 30
-//        background: Rectangle{
-//            //radius:10
-//            color: "lightblue"
-//        }
-//        style:ButtonStyle{
-//            color:"lightblue"
-//        }
+
     }
 
     StackView{
@@ -225,6 +184,22 @@ Item{
 
     Loader{
         id:loader
+        anchors.fill: parent
+    }
+
+    StackView{
+        id:stackNewUsersPage
+        initialItem: buttonList
+        anchors.fill: parent
+        focus: true
+        Keys.onReleased: if (event.key === Qt.Key_Back && stackView.depth > 1) {
+                             stackView.pop(loader_new_user.source = "NewUser.qml");
+                             event.accepted = true;
+                         }
+    }
+
+    Loader{
+        id:loader_new_user
         anchors.fill: parent
     }
 

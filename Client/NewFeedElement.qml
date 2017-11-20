@@ -8,7 +8,7 @@ import QtQuick.Controls.Styles 1.4
         anchors.fill: parent
 
         Button {
-            id: button
+            id: button_feed
             x: 8
             y: 8
             width: 40
@@ -23,7 +23,7 @@ import QtQuick.Controls.Styles 1.4
             checkable: false
             highlighted: false
             onClicked: {
-                loader.source = "ListFeedPage.qml"
+                loader_feed.source = "ListFeedPage.qml"
             }
         }
 

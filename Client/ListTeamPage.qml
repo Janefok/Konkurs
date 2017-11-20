@@ -125,7 +125,6 @@ Item{
             id: plus
             font.pixelSize: 40
             anchors.centerIn: parent
-            color: "white"
             text: "+"
         }
         radius: 30
