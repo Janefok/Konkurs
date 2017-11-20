@@ -21,3 +21,4 @@ Client/Makefile
 *.Release
 *.qmlc
 *.autosave
+Client/Client.pro
