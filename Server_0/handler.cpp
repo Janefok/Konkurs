@@ -8,6 +8,7 @@ Handler::Handler()
 QString Handler::Setfunc(QString str){
     QVariantMap tabledata;
     QVariantList tabledataList;
+    QVariantMap nametable;
     bd->open();
     if(str == "LOAD/ListUsers"){
         Table users( bd->setTable("Users") );
@@ -28,6 +29,7 @@ QString Handler::Setfunc(QString str){
            tabledata.insert("Faculty", kindFaculty.getValue("Faculty").toString());
            tabledataList << tabledata;
          }
+         nametable.insert("ListUsers", tabledataList);
     } else if(str == "LOAD/ListTeamUsers"){
 
         Table lTeamUsers( bd->setTable("Teams") );
@@ -62,6 +64,7 @@ QString Handler::Setfunc(QString str){
             tabledataList << tabledata;
         }
 
+        nametable.insert("ListTeamUsers", tabledataList);
     } else if(str == "LOAD/ListFeed"){
         Table lFeed( bd->setTable("Feed") );
         lFeed.select();
@@ -72,6 +75,7 @@ QString Handler::Setfunc(QString str){
            tabledata.insert("Info", lFeed.getValue("Info").toString());
            tabledataList << tabledata;
          }
+        nametable.insert("ListFeed", tabledataList);
     } /*else if(str == "LOAD/Users"){
         Table users( bd->setTable("Users") );
         Table kindsport( bd->setTable("SportsInterests") );
@@ -93,7 +97,7 @@ QString Handler::Setfunc(QString str){
          }
     }*/
     //получаем json
-    QJsonDocument json = QJsonDocument::fromVariant(tabledataList);
+    QJsonDocument json = QJsonDocument::fromVariant(nametable);
     //делаем из json строку
     QString Result(json.toJson(QJsonDocument::Compact));
     bd->close();

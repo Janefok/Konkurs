@@ -1,6 +1,6 @@
 #include "model.h"
 
-#include <QGuiApplication>
+#include <QApplication>
 #include <QQmlApplicationEngine>
 
 #include <qqmlengine.h>
@@ -8,11 +8,12 @@
 #include <qqml.h>
 #include <QtQuick/qquickitem.h>
 #include <QtQuick/qquickview.h>
+
 #include "myclient.h"
 
 int main(int argc, char *argv[])
 {
-    QGuiApplication app(argc, argv);
+    QApplication app(argc, argv);
 
     MyClient client ("localhost", 2323);
 
