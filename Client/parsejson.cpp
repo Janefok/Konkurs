@@ -29,3 +29,18 @@ QList<QString> getPostFromFeed(int index){
     l.push_back(info);
     return l;
 }
+
+QList<QString> getUserFromList(int index){
+    QList<QString> l;
+    if (feedList.isEmpty()){
+        return l;
+    }
+    QMap<QString, QVariant> post = feedList[index];
+    QString Surname = (post["Surname"]).toString();
+    QString Faculty = (post["Faculty"]).toString();
+    QString KindOfSport = (post["KindOfSport"]).toString();
+    l.push_back(Surname);
+    l.push_back(Faculty);
+    l.push_back(KindOfSport);
+    return l;
+}
