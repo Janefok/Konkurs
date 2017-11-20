@@ -54,14 +54,14 @@ DISTFILES += \
     FrameMain.qml \
     ListUsersPage.qml \
     StatisticsPage.qml \
+QML_IMPORT_PATH = "С:\Qt\5.8\mingw53_32\qml\QtQuick\Controls.2\Material"
+QML_IMPORT_PATH = "C:\Users\darkk\Documents\GitHub\Konkurs\Client"
     UserPage.qml \
     ListFeedPage.qml \
     ListTeamPage.qml \
     NewFeedElement.qml \
     NewUser.qml
 
-QML_IMPORT_PATH = "D:\Qt\5.8\mingw53_32\qml\QtQuick\Controls.2\Material"
-QML_IMPORT_PATH = "D:\Konkurs\Client"
 
 RESOURCES += \
     res.qrc

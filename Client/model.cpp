@@ -23,6 +23,11 @@ AnimalModel::AnimalModel(QObject *parent)
 //    model.addAnimal(Animal("Wolf", "Medium"));
 //    model.addAnimal(Animal("Polar bear", "Large"));
 //    model.addAnimal(Animal("Quoll", "Small"));
+    addAnimal(Animal("Quoll", "Small"));
+    addAnimal(Animal("Quoll", "Small"));
+    addAnimal(Animal("Quoll", "Small"));
+
+    addAnimal(Animal("Quoll", "Small"));
 
     addAnimal(Animal("Quoll", "Small"));
     addAnimal(Animal("Quoll", "Small"));
@@ -54,8 +59,33 @@ QVariant AnimalModel::data(const QModelIndex & index, int role) const {
     return QVariant();
 }
 
+QString AnimalModel::info()const{
+    return m_info;
+}
+QString AnimalModel::caption()const{
+    return m_caption;
+}
+void AnimalModel::setInfo(const QString &info){
+    if(info!=m_info){
+        m_info = info;
+        //update();
+        emit infoChanged();
+    }
+}
+void AnimalModel::setCaption(const QString &caption){
+    if(caption!= m_caption){
+        m_caption = caption;
+        emit captionChanged();
+    }
+}
+
+void AnimalModel::addNews(){
+    addAnimal(Animal(info(), caption()));
+}
 QHash<int, QByteArray> AnimalModel::roleNames() const {
     QHash<int, QByteArray> roles;
+    roles[TypeRole] = "info";
+    roles[SizeRole] = "caption";
     roles[TypeRole] = "caption";
     roles[SizeRole] = "info";
     return roles;

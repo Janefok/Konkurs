@@ -1,2 +1,17 @@
+<RCC>
+    <qresource prefix="/">
+        <file>CenterButton.qml</file>
+        <file>FeedPage.qml</file>
+        <file>FrameMain.qml</file>
+        <file>ListUsersPage.qml</file>
+        <file>ListViewMenu.qml</file>
+        <file>PersonMenu.qml</file>
+        <file>SearchData.qml</file>
+        <file>StatisticsPage.qml</file>
+        <file>TabButtons.qml</file>
+        <file>UserPage.qml</file>
+        <file>view.qml</file>
+    </qresource>
+</RCC>
 <!DOCTYPE RCC>
 <RCC version="1.0"/>

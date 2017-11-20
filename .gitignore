@@ -1,4 +1,7 @@
+*.Debug 
+build-* 
 *android-build*
+build* 
 *.obj
 *.stash
 Client/android-libClient.so-deployment-settings.json
