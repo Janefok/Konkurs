@@ -64,8 +64,11 @@ ToolBar{
             onTextChanged: {
                 if (!ignoreTextChange)
                     searchTextChanged(text)
+
+
             }
             onAccepted: doSearch(searchText.text)
+
         }
         ToolButton {
             id: searchButton

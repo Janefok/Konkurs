@@ -5,6 +5,11 @@ import QtQuick.Controls.Material 2.1
 
 Item{
     anchors.fill: parent
+
+    ListModel {
+          id: proxyModel
+        }
+
     ListModel {
        id: dataModel
        ListElement {
@@ -40,13 +45,13 @@ Item{
        ListElement {
            name: "Fokina"
            facultet: "IKT"
-           sport: "Tennis"
+           sport: "Kerling"
            color: "white"
        }
        ListElement {
            name: "Fokina"
            facultet: "IKT"
-           sport: "Tennis"
+           sport: "Volleyball"
            color: "white"
        }
 
@@ -60,13 +65,33 @@ Item{
        Rectangle{
            width: parent.width
            height: 40
-           Loader{
-               id:search
-               width: columnList.width
-               anchors.fill: parent
-               source: "SearchData.qml"
+//           Loader{
+//               id:search
+//               width: columnList.width
+//               anchors.fill: parent
+//               source: "SearchData.qml"
+//           }
+           SearchData{
+               //TextField{id:searchBar}
+               id: searchBar
+                   anchors.fill: parent
+               onSearchTextChanged:  {
+                       proxyModel.clear();
+                       for (var i=0;i!=dataModel.count;i++) {
+                         var item = dataModel.get(i);
+                         if (item.name.search(searchText) != -1) {
+                           proxyModel.append({"name": item.name, "facultet": item.facultet, "sport": item.sport});
+                         }
+                         if (item.sport.search(searchText) != -1) {
+                           proxyModel.append({"sport": item.sport, "facultet": item.facultet, "name": item.name});
+                         }
+                       }
+                       view.model = proxyModel;
+                     }
+               //onCanceled:{ view.model = dataModel}
+                //}
            }
-       }
+      }
 
        //List - как я поняла это область где рендерится весь список
         Rectangle{
@@ -146,7 +171,22 @@ Item{
                     }
                    onClicked: stackUsersPage.push(loader.source="UserPage.qml")
                 }   //end of delegate:
-            }   //end of ListView
+
+//               Component {
+//                     id: highlight
+//                     Rectangle {
+//                       width: view.currentItem.width
+//                       height: view.currentItem.height
+//                       color: "white"; radius: 5; opacity: 0.3
+//                       y: SpringFollow {
+//                         source: view.currentItem.y
+//                         spring: 3
+//                         damping: 0.2
+//                       }
+//                     }
+//                   }
+
+           }   //end of ListView
         }   //end of Rectangle
     }   //end of Column (with ToolBar & ListUsersPage)
 
